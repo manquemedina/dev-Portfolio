@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { themes, LightTheme, DarkTheme } from "../themes";
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
@@ -10,7 +10,7 @@ const Nav = styled.nav`
   width: 100%;
   height: 6rem;
   background-color: ${(props) => props.theme.colorSecundario};
-  color: ${(props) => props.theme.colorPrimario};
+  color: ${(props) => props.theme.colorFuente};
 `;
 /* const SunIcon = (
   <img
@@ -21,7 +21,7 @@ const Nav = styled.nav`
 /* const MoonIcon = (
   <img
     style={{ width: 40 }}
-    src="https://www.pngfind.com/pngs/m/223-2232869_png-file-svg-moon-icon-circle-png-transparent.png"
+    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/moon-1062679-1193901.png"
   />
 ); */
 const Toggle = styled.button`
@@ -48,16 +48,18 @@ const Navbar = (props) => {
       <img
         style={{ width: 40 }}
         src="https://icons.veryicon.com/png/o/miscellaneous/unicons/sun-34.png"
+        alt=""
       />
     ) : (
       <img
         style={{ width: 40 }}
-        src="https://www.pngfind.com/pngs/m/223-2232869_png-file-svg-moon-icon-circle-png-transparent.png"
+        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/moon-1062679-1193901.png"
+        alt=""
       />
     );
   return (
     <Nav>
-      <a href="#">Acerca de</a>
+      <a>Acerca de</a>
       <a>Proyectos</a>
       <a>Arte/Diseño</a>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
