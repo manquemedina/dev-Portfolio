@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import styled from "styled-components";
+import { WelcomeSection } from "./Components/WelcomeSection";
+import { Navbar } from "./Components/Navbar";
+import { themes/* , LighTheme, DarkTheme */ } from "./themes";
+
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+`;
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themes[theme]}>
+      <PageWrapper>
+        <Navbar theme={theme} setTheme={setTheme} />
+        <WelcomeSection />
+      </PageWrapper>
+    </ThemeProvider>
   );
 }
 
