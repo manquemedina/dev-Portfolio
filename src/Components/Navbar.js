@@ -11,29 +11,37 @@ const Nav = styled.nav`
   height: 6rem;
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
+  font-family: "Bungee Shade", cursive;
+  font-size: 1.8rem;
 `;
-/* const SunIcon = (
-  <img
-    style={{ width: 40 }}
-    src="https://icons.veryicon.com/png/o/miscellaneous/unicons/sun-34.png"
-  />
-); */
-/* const MoonIcon = (
-  <img
-    style={{ width: 40 }}
-    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/moon-1062679-1193901.png"
-  />
-); */
+
 const Toggle = styled.button`
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: min-content;
+  width: min-content;
+  margin: 1rem;
   border-radius: 50%;
   border: none;
   background-color: ${(props) => props.theme.colorSecundario};
-  color: ${(props) => props.theme.colorPrimario};
-  transition: all 0.5s ease;
+  color: ${(props) => props.theme.colorFuente};
+  transition: all 2s ease;
 `;
+const A = styled.a`
+  margin: 0.5rem;
+  text-decoration: none;
+  color: ${(props) => props.theme.colorFuente};
+  :hover {
+    color: ${(props) => props.theme.colorPrimario};
+  }
+`;
+
+const TestImg = (
+  <img
+    style={{ height: "14rem", margin: "3rem auto 1.5rem auto" }}
+    src="https://raw.githubusercontent.com/manquemedina/img/3941266383af06713d2a071681e164e17e070a3a/sketch1653050411022.png"
+    alt=""
+  />
+);
 
 const Navbar = (props) => {
   function changeTheme() {
@@ -59,9 +67,18 @@ const Navbar = (props) => {
     );
   return (
     <Nav>
-      <a>Acerca de</a>
-      <a>Proyectos</a>
-      <a>Arte/Diseño</a>
+      <A href="#" alt="">
+        {TestImg}
+      </A>
+      <A href="#" alt="">
+        Acerca de
+      </A>
+      <A href="#" alt="">
+        Proyectos
+      </A>
+      <A href="#" alt="">
+        Arte/Diseño
+      </A>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
     </Nav>
   );
