@@ -13,6 +13,7 @@ const Nav = styled.nav`
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee Shade", cursive;
   font-size: 1.8rem;
+  box-shadow: ${(props) => props.theme.BoxShadow};
 `;
 
 const Toggle = styled.button`
@@ -24,24 +25,25 @@ const Toggle = styled.button`
   border: none;
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
-  transition: all 2s ease;
+  transition: all 1s ease;
 `;
 const A = styled.a`
   margin: 0.5rem;
   text-decoration: none;
+  cursor: cell;
   color: ${(props) => props.theme.colorFuente};
   :hover {
     color: ${(props) => props.theme.colorPrimario};
   }
 `;
 
-const TestImg = (
+/* const TestImg = (
   <img
     style={{ height: "14rem", margin: "3rem auto 1.5rem auto" }}
     src="https://raw.githubusercontent.com/manquemedina/img/3941266383af06713d2a071681e164e17e070a3a/sketch1653050411022.png"
     alt=""
   />
-);
+); */
 
 const Navbar = (props) => {
   function changeTheme() {
@@ -54,22 +56,22 @@ const Navbar = (props) => {
   const icon =
     props.theme === "light" ? (
       <img
-        style={{ width: 40 }}
-        src="https://icons.veryicon.com/png/o/miscellaneous/unicons/sun-34.png"
+        style={{ width: 63 }}
+        src="https://github.com/manquemedina/img/blob/master/fuegoLight.png?raw=true"
         alt=""
       />
     ) : (
       <img
-        style={{ width: 40 }}
-        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/moon-1062679-1193901.png"
+        style={{ width: 63 }}
+        src="https://github.com/manquemedina/img/blob/master/fuegoDark.png?raw=true"
         alt=""
       />
     );
   return (
     <Nav>
-      <A href="#" alt="">
+      {/*       <A href="#" alt="">
         {TestImg}
-      </A>
+      </A> */}
       <A href="#" alt="">
         Acerca de
       </A>
