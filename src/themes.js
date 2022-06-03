@@ -1,9 +1,9 @@
-
 const LightTheme = {
   colorPrimario: "#fff",
   colorSecundario: "#999",
   colorTerciario: "#666",
   colorFuente: "#000",
+  colorHover: "#FF7600",
   BoxShadow:
     "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
 };
@@ -12,6 +12,7 @@ const DarkTheme = {
   colorSecundario: "#444",
   colorTerciario: "#777",
   colorFuente: "#fff",
+  colorHover: "#A44CFF",
   BoxShadow: "0px 3px 2px 0px rgba(250,250,250,0.42)",
 };
 

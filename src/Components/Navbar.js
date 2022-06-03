@@ -8,19 +8,23 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee Shade", cursive;
-  font-size: 1.8rem;
+  font-size: 2em;
   box-shadow: ${(props) => props.theme.BoxShadow};
+  @media (max-width: 40em) {
+    flex-direction: column;
+    height: fit-content;
+  }
 `;
 
 const Toggle = styled.button`
   cursor: pointer;
   height: min-content;
   width: min-content;
-  margin: 1rem;
+  margin: 2rem;
   border-radius: 50%;
   border: none;
   background-color: ${(props) => props.theme.colorSecundario};
@@ -29,11 +33,16 @@ const Toggle = styled.button`
 `;
 const A = styled.a`
   margin: 0.5rem;
+  padding: 0 1rem;
+  width: 100%;
+  border-radius: 10px;
   text-decoration: none;
   cursor: cell;
   color: ${(props) => props.theme.colorFuente};
+  transition: all 0.5s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
+    background-color: ${(props) => props.theme.colorHover};
   }
 `;
 
@@ -56,13 +65,13 @@ const Navbar = (props) => {
   const icon =
     props.theme === "light" ? (
       <img
-        style={{ width: 63 }}
+        style={{ width: 55 }}
         src="https://github.com/manquemedina/img/blob/master/fuegoLight.png?raw=true"
         alt=""
       />
     ) : (
       <img
-        style={{ width: 63 }}
+        style={{ width: 55 }}
         src="https://github.com/manquemedina/img/blob/master/fuegoDark.png?raw=true"
         alt=""
       />
