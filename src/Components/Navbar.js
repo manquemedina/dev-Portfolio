@@ -34,7 +34,7 @@ const Toggle = styled.button`
 const A = styled.a`
   margin: 0.5rem;
   padding: 0 1rem;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 10px;
   text-decoration: none;
   cursor: cell;
