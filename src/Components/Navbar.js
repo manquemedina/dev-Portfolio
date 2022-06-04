@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 
 const Nav = styled.nav`
   display: flex;
@@ -29,8 +30,19 @@ const Toggle = styled.button`
   border: none;
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
-  transition: all 1s ease;
+  transition: all 0.7s ease;
 `;
+
+const glow = keyframes`
+  from {
+      text-shadow: 0  0 5px #444, 0 0 10px #777, 0 0 30px #fff, 0 0 40px #A44CFF, 0 0 50px #444, 0 0 60px #777, 0 0 70px #A44CFF;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #A44CFF, 0 0 20px #777, 10 10 30px #A44CFF, 0 0 40px #A44CFF, 0 20 50px #444, 2 0 0 60px #777, 0 0 70px #A44CFF;
+  }
+`;
+
 const A = styled.a`
   margin: 0.5rem;
   padding: 0 1rem;
@@ -41,8 +53,9 @@ const A = styled.a`
   color: ${(props) => props.theme.colorFuente};
   transition: all 0.5s ease;
   :hover {
-    color: ${(props) => props.theme.colorPrimario};
-    background-color: ${(props) => props.theme.colorHover};
+    /* color: ${(props) => props.theme.colorPrimario};
+    background-color: ${(props) => props.theme.colorHover}; */
+    animation: ${glow} 1s ease-in-out infinite alternate;
   }
 `;
 

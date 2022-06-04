@@ -27,25 +27,6 @@ const Title = styled.div`
     background-color: ${(props) => props.theme.colorHover};
   }
 `;
-const WelcomeTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: "Bungee Shade", cursive;
-  font-size: 1.8em;
-  height: fit-content;
-  width: fit-content;
-  padding: 1em;
-  margin: 1em;
-  border-radius: 10px;
-  color: ${(props) => props.theme.colorFuente};
-  background-color: ${(props) => props.theme.colorSecundario};
-  box-shadow: ${(props) => props.theme.BoxShadow};
-  transition: all 0.5s ease;
-  :hover {
-    color: ${(props) => props.theme.colorPrimario};
-    background-color: ${(props) => props.theme.colorHover};
-  }
-`;
 
 const PajarrakoWelcome = (props) => {
   const pajarrako =
@@ -66,7 +47,7 @@ const PajarrakoWelcome = (props) => {
     <WelcomeDiv>
       <Title>Hola, soy Manque{pajarrako}</Title>
 
-      <WelcomeTitle>Y hago desarrollo web</WelcomeTitle>
+      <Title style={{ fontSize: "1.72em" }}>Y hago desarrollo web</Title>
     </WelcomeDiv>
   );
 };

@@ -5,6 +5,8 @@ import { PajarrakoWelcome } from "./Components/PajarrakoWelcome";
 import { About } from "./Components/About";
 import { themes } from "./themes";
 
+//WRAPPERS
+
 const PageWrapper = styled.div`
   margin: 0 auto;
   background-color: ${(props) => props.theme.colorSecundario};
