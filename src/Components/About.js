@@ -1,22 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { keyframes } from "styled-components";
-
-const glow = keyframes`
-from {
-    text-shadow: 2px 2px 2px rgba(220, 108, 229, 0.76);
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-`;
+import { textDrop, shake } from "../animations";
 
 const Title = styled.div`
   font-family: "Bungee Shade", cursive;
   font-size: 1.5em;
   margin: 1em;
-  animation: ${glow} 1s ease-in-out infinite alternate;
+  :hover {
+    animation: ${textDrop} 0.3s ease-out;
+    animation: ${shake} 1s infinite ease-in;
+  }
 `;
 
 const AboutImg = styled.img`

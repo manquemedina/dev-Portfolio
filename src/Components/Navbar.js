@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { keyframes } from "styled-components";
 
 const Nav = styled.nav`
   display: flex;
@@ -13,7 +12,7 @@ const Nav = styled.nav`
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee Shade", cursive;
-  font-size: 2em;
+  font-size: 1.8em;
   box-shadow: ${(props) => props.theme.BoxShadow};
   @media (max-width: 40em) {
     flex-direction: column;
@@ -30,42 +29,23 @@ const Toggle = styled.button`
   border: none;
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
-  transition: all 0.7s ease;
-`;
-
-const glow = keyframes`
-  from {
-      text-shadow: 0  0 5px #444, 0 0 10px #777, 0 0 30px #fff, 0 0 40px #A44CFF, 0 0 50px #444, 0 0 60px #777, 0 0 70px #A44CFF;
-  }
-  
-  to {
-    text-shadow: 0 0 10px #A44CFF, 0 0 20px #777, 10 10 30px #A44CFF, 0 0 40px #A44CFF, 0 20 50px #444, 2 0 0 60px #777, 0 0 70px #A44CFF;
-  }
+  transition: all 0.5s ease;
 `;
 
 const A = styled.a`
   margin: 0.5rem;
-  padding: 0 1rem;
-  /* width: 100%; */
+  padding: 0.5 1rem;
+  width: 100%;
   border-radius: 10px;
   text-decoration: none;
-  cursor: cell;
+  word-wrap: no-wrap;
   color: ${(props) => props.theme.colorFuente};
   transition: all 0.5s ease;
   :hover {
-    /* color: ${(props) => props.theme.colorPrimario};
-    background-color: ${(props) => props.theme.colorHover}; */
-    animation: ${glow} 1s ease-in-out infinite alternate;
+    color: ${(props) => props.theme.colorPrimario};
+    background-color: ${(props) => props.theme.colorHover};
   }
 `;
-
-/* const TestImg = (
-  <img
-    style={{ height: "14rem", margin: "3rem auto 1.5rem auto" }}
-    src="https://raw.githubusercontent.com/manquemedina/img/3941266383af06713d2a071681e164e17e070a3a/sketch1653050411022.png"
-    alt=""
-  />
-); */
 
 const Navbar = (props) => {
   function changeTheme() {
@@ -102,6 +82,9 @@ const Navbar = (props) => {
       </A>
       <A href="#" alt="">
         Arte/Diseño
+      </A>
+      <A href="#" alt="">
+        Contacto
       </A>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
     </Nav>
