@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { textDrop, shake } from "../animations";
+import { textBlur } from "../animations";
 
 const Title = styled.div`
   font-family: "Bungee Shade", cursive;
   font-size: 1.5em;
   margin: 1em;
   :hover {
-    animation: ${textDrop} 0.3s ease-out;
-    animation: ${shake} 1s infinite ease-in;
+    animation: ${textBlur} 0.5s ease-out forwards;
   }
 `;
 
