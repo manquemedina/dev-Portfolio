@@ -1,4 +1,5 @@
 import React from "react";
+/* import { useState } from "react"; */
 import styled from "styled-components";
 import { shakeAlt } from "../animations";
 
@@ -87,9 +88,6 @@ const Navbar = (props) => {
     }
   }
 
-  function openModal() {
-    props.setOpenModal(!props.setOpenModal);
-  }
   const icon =
     props.theme === "light" ? (
       <img
@@ -121,7 +119,7 @@ const Navbar = (props) => {
       <A href="#" alt="">
         Contacto
       </A>
-      <ModalBtn onClick={openModal}>※</ModalBtn>
+      <ModalBtn>※</ModalBtn>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
     </Nav>
   );
