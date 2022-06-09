@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { shakeAlt } from "../animations";
 
 const Nav = styled.nav`
+z-index: 2;
   position: fixed;
   top: 0;
   display: flex;

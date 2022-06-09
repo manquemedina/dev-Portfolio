@@ -46,7 +46,7 @@ const slideIn = keyframes`
 0% {
     position: relative;
     right: -600px;
-    opacity: 0;
+    /* opacity: 0; */
   }
 100% {
     position: relative;
@@ -54,5 +54,25 @@ const slideIn = keyframes`
     opacity:1;
   }
 `;
+const slideInNube = keyframes`
+0% {
+  top: 23%;
+    right: -600px;
+    
+  }
+100% {
+  top: 23%;
+  right: 18%;
+  }
+`;
 
-export { textBlur, shake, shakeAlt, slideIn };
+const floating = keyframes`
+0% { top: 33%}
+  
+100% {
+   top: 11%
+  }
+
+`;
+
+export { textBlur, shake, shakeAlt, slideIn, floating, slideInNube };

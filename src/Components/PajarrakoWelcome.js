@@ -17,6 +17,7 @@ const WelcomeDiv = styled.div`
 `;
 
 const Title = styled.div`
+  z-index: 1;
   display: flex;
   flex-direction: column;
   font-family: "Bungee Shade", cursive;
