@@ -1,5 +1,5 @@
 import React from "react";
-/* import { useState } from "react"; */
+import { useState } from "react";
 import styled from "styled-components";
 import { shakeAlt } from "../animations";
 
@@ -64,7 +64,7 @@ const ModalBtn = styled.div`
   display: none;
   border-radius: 10px;
   font-size: 3em;
-  
+
   transition: all 0.5s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
