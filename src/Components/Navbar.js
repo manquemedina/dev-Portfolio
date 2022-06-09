@@ -12,11 +12,11 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 7rem;
+  height: min-content;
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee Shade", cursive;
-  font-size: 1.8em;
+  font-size: 1.5em;
   box-shadow: ${(props) => props.theme.BoxShadow};
   @media (max-width: 43em) {
     position: relative;
@@ -63,7 +63,8 @@ const A = styled.a`
 const ModalBtn = styled.div`
   display: none;
   border-radius: 10px;
-  font-size: xx-large;
+  font-size: 3em;
+  
   transition: all 0.5s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
@@ -72,10 +73,8 @@ const ModalBtn = styled.div`
   @media (max-width: 43em) {
     display: flex;
     position: fixed;
-    top: 2px;
+    top: -18px;
     right: 1rem;
-    text-align: center;
-    justify-content: center;
   }
 `;
 
@@ -105,7 +104,7 @@ const Navbar = (props) => {
   return (
     <Nav>
       <A href="#" alt="">
-        Bio
+        Acerca de
       </A>
       <A href="#" alt="">
         Tecnologias
