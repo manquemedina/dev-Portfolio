@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+/* import { useState } from "react"; */
 import styled from "styled-components";
 import { shakeAlt } from "../animations";
 
@@ -19,10 +19,6 @@ const Nav = styled.nav`
   font-size: 1.5em;
   box-shadow: ${(props) => props.theme.BoxShadow};
   @media (max-width: 43em) {
-    position: relative;
-    /* flex-direction: column; */
-    height: fit-content;
-    justify-content: right;
   }
 `;
 
@@ -86,6 +82,9 @@ const Navbar = (props) => {
       props.setTheme("light");
     }
   }
+  function handleClick() {
+    props.setOpenModal(true);
+  }
 
   const icon =
     props.theme === "light" ? (
@@ -118,9 +117,10 @@ const Navbar = (props) => {
       <A href="#" alt="">
         Contacto
       </A>
-      <ModalBtn>※</ModalBtn>
+      <ModalBtn onClick={handleClick}>※</ModalBtn>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
     </Nav>
   );
 };
 export { Navbar };
+export { ModalBtn, A };

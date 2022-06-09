@@ -38,24 +38,6 @@ const AboutWrapper = styled.div`
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
 `;
-const ModalWindow = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  height: 100vh;
-  width: 100vw;
-  background-color: aliceblue;
-  color: black;
-  font-family: "Bungee Shade", cursive;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-`;
-const ModalLink = styled.a`
-  margin: 1rem;
-  text-decoration: none;
-`;
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -65,7 +47,12 @@ function App() {
     <ThemeProvider theme={themes[theme]}>
       <PageWrapper>
         <WelcomeWrapper>
-          <Navbar theme={theme} setTheme={setTheme} />
+          <Navbar
+            theme={theme}
+            setTheme={setTheme}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+          />
           <PajarrakoWelcome theme={theme} setTheme={setTheme} />
         </WelcomeWrapper>
         <AboutWrapper>
@@ -73,25 +60,7 @@ function App() {
         </AboutWrapper>
         {/* una vez que tena el estado ésto de abajo va a andar */}
         {openModal && (
-          <Modal>
-            <ModalWindow>
-              <ModalLink href="#" alt="">
-                Acerca de
-              </ModalLink>
-              <ModalLink href="#" alt="">
-                Tecnologias
-              </ModalLink>
-              <ModalLink href="#" alt="">
-                Proyectos
-              </ModalLink>
-              <ModalLink href="#" alt="">
-                Arte/Diseño
-              </ModalLink>
-              <ModalLink href="#" alt="">
-                Contacto
-              </ModalLink>
-            </ModalWindow>
-          </Modal>
+          <Modal openModal={openModal} setOpenModal={setOpenModal} />
         )}
       </PageWrapper>
     </ThemeProvider>
