@@ -66,13 +66,4 @@ const slideInNube = keyframes`
   }
 `;
 
-const floating = keyframes`
-0% { top: 33%}
-  
-100% {
-   top: 11%
-  }
-
-`;
-
-export { textBlur, shake, shakeAlt, slideIn, floating, slideInNube };
+export { textBlur, shake, shakeAlt, slideIn, slideInNube };

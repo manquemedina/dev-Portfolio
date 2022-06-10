@@ -5,7 +5,7 @@ import { PajarrakoWelcome } from "./Components/PajarrakoWelcome";
 import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
 import { themes } from "./themes";
-import { shake, slideInNube } from "./animations";
+import { slideIn } from "./animations";
 
 //WRAPPERS
 
@@ -16,47 +16,18 @@ const PageWrapper = styled.div`
   font-family: "Bungee Shade", cursive;
   font-size: 1em;
   height: fit-content;
+  animation: ${slideIn} 1s 1 ease-in-out;
 `;
-
-const NubeGrande = styled.img`
-  z-index: 2;
-  width: 24em;
-  position: absolute;
-  top: 23%;
-  left: 12%;
-  transition: all 0.5s ease;
-  animation: ${shake} 7s infinite ease-in-out;
-`;
-const NubeChica = styled.img`
-  z-index: 2;
-  width: 20em;
-  position: absolute;
-  top: 13%;
-  right: 18%;
-  transition: all 0.5s ease;
-  animation: ${slideInNube} 7s 1 forwards;
-`;
-/* const Sol = styled.img`
-  z-index: 2;
-  width: 11em;
-  position: absolute;
-  top: 21%;
-  left: 32%;
-  transition: all 0.3s ease;
-  animation: ${slideInNube} 2s ease 1 forwards;
-`; */
 
 const WelcomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  background-color: ${(props) => props.theme.colorPrimario};
-  /* background-image: url("https://github.com/manquemedina/img/blob/master/nubeGrande.png?raw=true"); */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   color: ${(props) => props.theme.colorPrimario};
+  background-color: ${(props) => props.theme.colorPrimario};
+  /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
 `;
 
 const AboutWrapper = styled.div`
@@ -68,6 +39,7 @@ const AboutWrapper = styled.div`
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
   font-size: 2em;
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
 `;
@@ -86,27 +58,11 @@ function App() {
             openModal={openModal}
             setOpenModal={setOpenModal}
           />
-          <NubeGrande
-            src={
-              "https://github.com/manquemedina/img/blob/master/nubeGrande.png?raw=true"
-            }
-          />
-          {/*           <Sol
-            src={
-              "https://github.com/manquemedina/img/blob/master/sol.png?raw=true"
-            }
-          /> */}
-          <NubeChica
-            src={
-              "https://github.com/manquemedina/img/blob/master/nubeChica.png?raw=true"
-            }
-          />
           <PajarrakoWelcome theme={theme} setTheme={setTheme} />
         </WelcomeWrapper>
         <AboutWrapper>
           <About />
         </AboutWrapper>
-        {/* una vez que tena el estado ésto de abajo va a andar */}
         {openModal && (
           <Modal openModal={openModal} setOpenModal={setOpenModal} />
         )}

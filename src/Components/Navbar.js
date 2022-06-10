@@ -19,6 +19,7 @@ z-index: 2;
   font-family: "Bungee Shade", cursive;
   font-size: 1.5em;
   box-shadow: ${(props) => props.theme.BoxShadow};
+  /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
   @media (max-width: 43em) {
   }
 `;

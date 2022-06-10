@@ -29,12 +29,13 @@ const Title = styled.div`
   border-radius: 10px;
   color: ${(props) => props.theme.colorFuente};
   background-color: ${(props) => props.theme.colorSecundario};
+  /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
   box-shadow: ${(props) => props.theme.BoxShadow};
   transition: all 0.5s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
-    animation: ${shake} 1s infinite ease-in-out;
+    animation: ${shake} 2s infinite ease-in-out;
   }
 `;
 
