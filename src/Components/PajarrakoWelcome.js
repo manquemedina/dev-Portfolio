@@ -35,7 +35,7 @@ const Title = styled.div`
   :hover {
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
-    animation: ${shake} 2s infinite ease-in-out;
+    /* animation: ${shake} 2s infinite ease-in-out; */
   }
 `;
 

@@ -15,7 +15,7 @@ const AboutText = styled.div`
   font-family: "Bungee Hairline";
   font-size: 1em;
   font-weight: bolder;
-  margin: 3em;
+  margin: 4em;
 `;
 
 const About = () => {
@@ -26,9 +26,9 @@ const About = () => {
       <AboutText>
         Hola! Soy Manque Medina, desarrollador web front-end autodidacta. Vengo
         del campo de las artes (música, plástica) y estoy iniciando en el mundo
-        de la programación. Me encuentro en costante búsqueda y asimilación de
-        nuevas tecnologías, conocimientos y desafíos. ¡Pongámonos en{" "}
-        <a href="#">contacto!</a>
+        de la programación. Me encuentro en costante fo dermación, asimilando
+        nuevas tecnologías, conocimientos y desafíos. <strong>¡Pongámonos en
+        <a href="#">contacto!</a></strong>
       </AboutText>
     </>
   );

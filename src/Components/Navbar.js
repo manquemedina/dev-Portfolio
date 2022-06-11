@@ -1,10 +1,10 @@
 import React from "react";
 /* import { useState } from "react"; */
 import styled from "styled-components";
-import { shakeAlt } from "../animations";
+import { shakeAlt, bounce } from "../animations";
 
 const Nav = styled.nav`
-z-index: 2;
+  z-index: 2;
   position: fixed;
   top: 0;
   display: flex;
@@ -20,6 +20,7 @@ z-index: 2;
   font-size: 1.5em;
   box-shadow: ${(props) => props.theme.BoxShadow};
   /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
+
   @media (max-width: 43em) {
   }
 `;
@@ -46,13 +47,15 @@ const A = styled.a`
   border-radius: 10px;
   text-decoration: none;
   color: ${(props) => props.theme.colorFuente};
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
-    animation: ${shakeAlt} 0.7s ease forwards;
+    /* animation: ${shakeAlt} 0.7s ease forwards; */
+    animation: ${bounce} 2s infinite forwards ease-in-out;
     animation-iteration-count: 1;
   }
+
   @media (max-width: 43em) {
     display: none;
   }

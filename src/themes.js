@@ -15,7 +15,7 @@ const DarkTheme = {
   colorFuente: "#fff",
   colorHover: "#A44CFF",
   BoxShadow:
-  "rgba(240164,176,255,0.75) 0px 1px 1px 0px,rgba(255,255,255,0.75) 0px 1px 1px 1px",
+  "rgba(240164,176,255,0.55) 0px 1px 0px 0px,rgba(255,255,255,0.45) 0px 1px 0px 1px",
 };
 
 /* {box-shadow: -2px 4px 3px 0px rgba(164,76,255,0.75);
