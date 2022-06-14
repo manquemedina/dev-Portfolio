@@ -5,6 +5,7 @@ import { PajarrakoWelcome } from "./Components/PajarrakoWelcome";
 import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
 import { Tecnologias } from "./Components/tecnologias";
+import { ProyectCard } from "./Components/ProyectCard";
 import { themes } from "./themes";
 import { slideIn } from "./animations";
 
@@ -56,6 +57,17 @@ const TecnologíasWrapper = styled.div`
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
 `;
+const ProjectsWrapper = styled.div`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+  font-size: 2em;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-color: ${(props) => props.theme.colorPrimario};
+  color: ${(props) => props.theme.colorFuente};
+`;
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -82,6 +94,34 @@ function App() {
         <TecnologíasWrapper>
           <Tecnologias />
         </TecnologíasWrapper>
+        <ProjectsWrapper>
+          <ProyectCard
+            title={"ToDo List"}
+            img={
+              "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+            }
+            descripcion={
+              "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+            }
+            linkProject={"#"}
+            linkRepo={"#"}
+          />
+          {/*           <ProyectCard
+            title={"ToDo List"}
+            img={
+              "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+            }
+            descripcion={"dadsadsadsadsa"}
+            linkProject={"https://www.google.com"}
+          />          <ProyectCard
+          title={"ToDo List"}
+          img={
+            "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+          }
+          descripcion={"dadsadsadsadsa"}
+          linkProject={"https://www.google.com"}
+        /> */}
+        </ProjectsWrapper>
       </PageWrapper>
     </ThemeProvider>
   );
