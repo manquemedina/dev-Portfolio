@@ -78,4 +78,4 @@ const Tecnologias = () => {
   );
 };
 
-export { Tecnologias, logoExternalLink, logoRepo };
+export { Tecnologias, logoExternalLink, logoRepo, Title };

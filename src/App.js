@@ -4,8 +4,9 @@ import { Navbar } from "./Components/Navbar";
 import { PajarrakoWelcome } from "./Components/PajarrakoWelcome";
 import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
-import { Tecnologias } from "./Components/tecnologias";
+import { Tecnologias, Title } from "./Components/tecnologias";
 import { ProyectCard } from "./Components/ProyectCard";
+import { ProyectCardAlt } from "./Components/ProjectCardAlt";
 import { themes } from "./themes";
 import { slideIn } from "./animations";
 
@@ -62,11 +63,15 @@ const ProjectsWrapper = styled.div`
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  padding: 2em;
+  /* margin: 1rem; */
+  padding: 1rem;
   font-size: 2em;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
 `;
 
 function App() {
@@ -95,6 +100,7 @@ function App() {
           <Tecnologias />
         </TecnologíasWrapper>
         <ProjectsWrapper>
+        <Title>Projectos</Title>
           <ProyectCard
             title={"ToDo List"}
             img={
@@ -106,21 +112,17 @@ function App() {
             linkProject={"#"}
             linkRepo={"#"}
           />
-          {/*           <ProyectCard
+          <ProyectCardAlt
             title={"ToDo List"}
             img={
               "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
             }
-            descripcion={"dadsadsadsadsa"}
-            linkProject={"https://www.google.com"}
-          />          <ProyectCard
-          title={"ToDo List"}
-          img={
-            "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
-          }
-          descripcion={"dadsadsadsadsa"}
-          linkProject={"https://www.google.com"}
-        /> */}
+            descripcion={
+              "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+            }
+            linkProject={"#"}
+            linkRepo={"#"}
+          />
         </ProjectsWrapper>
       </PageWrapper>
     </ThemeProvider>

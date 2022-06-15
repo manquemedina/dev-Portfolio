@@ -4,7 +4,7 @@ import { logoExternalLink, logoRepo } from "./tecnologias";
 
 const CardWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+
   width: 100%;
   @media (max-width: 43em) {
     flex-direction: column;
@@ -18,7 +18,7 @@ const Card = styled.div`
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  margin: 0 1em;
+  margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
   font-family: "Bungee Shade", cursive;
@@ -29,6 +29,9 @@ const Card = styled.div`
   @media (max-width: 43em) {
     width: auto;
     margin: auto;
+  }
+  @media (max-width: 688px) {
+    width: 60vw;
   }
 `;
 const CardTitle = styled.h3`
@@ -66,6 +69,7 @@ const Descripcion = styled.div`
   text-align: center;
   align-items: center;
   justify-content: space-around;
+  margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
   font-family: "Bungee Shade", cursive;
@@ -102,4 +106,14 @@ const ProyectCard = (props) => {
     </CardWrapper>
   );
 };
-export { ProyectCard };
+export {
+  ProyectCard,
+  CardWrapper,
+  Card,
+  CardTitle,
+  ProjectImg,
+  IconDiv,
+  Icon,
+  Descripcion,
+  PDescripcion,
+};
