@@ -10,12 +10,24 @@ const Title = styled.div`
   margin: 1em;
   animation: ${slideIn} 1s forwards ease-out;
 `;
+const BackgroundDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+  border-radius: 10px;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorSecundario};
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  transition: all 0.5s ease;
+`;
 const GridTecnologías = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(2.5em, 1fr));
   grid-auto-rows: minmax(2rem, 2fr);
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   width: 100%;
+  /* margin: 6em auto; */
 `;
 const CardLinks = styled.img`
   width: 3em;
@@ -61,7 +73,7 @@ const logoFigma = (
 //COMPONENTE
 const Tecnologias = () => {
   return (
-    <>
+    <BackgroundDiv>
       <Title>Tecnologías:</Title>
       <GridTecnologías>
         {logoHTML}
@@ -74,7 +86,7 @@ const Tecnologias = () => {
         {logoGitHub}
         {logoFigma}
       </GridTecnologías>
-    </>
+    </BackgroundDiv>
   );
 };
 

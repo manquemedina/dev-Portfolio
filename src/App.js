@@ -29,6 +29,7 @@ const WelcomeWrapper = styled.div`
   /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
   /* background-image: url("https://www.transparenttextures.com/patterns/light-wool.png"); */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
 `;
 
 const AboutWrapper = styled.div`
@@ -43,6 +44,7 @@ const AboutWrapper = styled.div`
   /* background-image: url("https://www.transparenttextures.com/patterns/light-wool.png"); */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
+  background-attachment: fixed;
   color: ${(props) => props.theme.colorFuente};
 `;
 const TecnologíasWrapper = styled.div`
@@ -56,6 +58,7 @@ const TecnologíasWrapper = styled.div`
   font-size: 2em;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
+  background-attachment: fixed;
   color: ${(props) => props.theme.colorFuente};
 `;
 const ProjectsWrapper = styled.div`
@@ -68,6 +71,7 @@ const ProjectsWrapper = styled.div`
   font-size: 2em;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
+  background-attachment: fixed;
   color: ${(props) => props.theme.colorFuente};
   @media (max-width: 980px) {
     flex-direction: column;
@@ -100,19 +104,8 @@ function App() {
           <Tecnologias />
         </TecnologíasWrapper>
         <ProjectsWrapper>
-        <Title>Projectos</Title>
+          <Title>Projectos</Title>
           <ProyectCard
-            title={"ToDo List"}
-            img={
-              "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
-            }
-            descripcion={
-              "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
-            }
-            linkProject={"#"}
-            linkRepo={"#"}
-          />
-          <ProyectCardAlt
             title={"ToDo List"}
             img={
               "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"

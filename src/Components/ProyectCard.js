@@ -4,7 +4,7 @@ import { logoExternalLink, logoRepo } from "./tecnologias";
 
 const CardWrapper = styled.div`
   display: flex;
-
+  
   width: 100%;
   @media (max-width: 43em) {
     flex-direction: column;
