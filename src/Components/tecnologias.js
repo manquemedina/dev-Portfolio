@@ -7,7 +7,8 @@ import { slideIn } from "../animations";
 const Title = styled.div`
   font-family: "Bungee Shade", cursive;
   font-size: 1.5em;
-  margin: 1em;
+  /*   margin: 1em;
+ */
   animation: ${slideIn} 1s forwards ease-out;
 `;
 const BackgroundDiv = styled.div`
@@ -27,7 +28,7 @@ const GridTecnologías = styled.div`
   grid-auto-rows: minmax(2rem, 2fr);
   grid-gap: 3rem;
   width: 100%;
-  /* margin: 6em auto; */
+  margin: 6em auto;
 `;
 const CardLinks = styled.img`
   width: 3em;

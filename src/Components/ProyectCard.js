@@ -4,15 +4,14 @@ import { logoExternalLink, logoRepo } from "./tecnologias";
 
 const CardWrapper = styled.div`
   display: flex;
-  
-  width: 100%;
+  flex-direction: row;
   @media (max-width: 43em) {
     flex-direction: column;
   }
 `;
 
 const Card = styled.div`
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -62,7 +61,7 @@ const Icon = styled.button`
   color: ${(props) => props.theme.colorFuente};
 `;
 const Descripcion = styled.div`
-  width: 50%;
+  width: 45%;
   height: min-content;
   background-color: ${(props) => props.theme.colorPrimario};
   box-shadow: ${(props) => props.theme.BoxShadow};

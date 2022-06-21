@@ -6,7 +6,6 @@ import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
 import { Tecnologias, Title } from "./Components/tecnologias";
 import { ProyectCard } from "./Components/ProyectCard";
-import { ProyectCardAlt } from "./Components/ProjectCardAlt";
 import { themes } from "./themes";
 import { slideIn } from "./animations";
 
@@ -63,10 +62,11 @@ const TecnologíasWrapper = styled.div`
 `;
 const ProjectsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  /* margin: 1rem; */
+  margin: 1rem;
   padding: 1rem;
   font-size: 2em;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
@@ -105,6 +105,17 @@ function App() {
         </TecnologíasWrapper>
         <ProjectsWrapper>
           <Title>Projectos</Title>
+          <ProyectCard
+            title={"ToDo List"}
+            img={
+              "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+            }
+            descripcion={
+              "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+            }
+            linkProject={"#"}
+            linkRepo={"#"}
+          />
           <ProyectCard
             title={"ToDo List"}
             img={
