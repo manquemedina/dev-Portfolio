@@ -1,43 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { shake, slideIn } from "../animations";
-
-const WelcomeDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-items: space-around;
-  justify-content: center;
-  margin: 1em;
-  margin-top: 100px;
-  animation: ${slideIn} 1.2s ease-out;
-  animation-iteration-count: 1;
-  @media (max-width: 43em) {
-    margin-top: 3.2em;
-  }
-`;
-
-const Title = styled.div`
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  font-family: "Bungee Shade", cursive;
-  font-size: 2.6em;
-  align-items: center;
-  padding: 0.5em;
-  margin: 0.5em;
-  width: fit-content;
-  border-radius: 10px;
-  color: ${(props) => props.theme.colorFuente};
-  background-color: ${(props) => props.theme.colorSecundario};
-  /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
-  box-shadow: ${(props) => props.theme.BoxShadow};
-  transition: all 0.5s ease;
-  :hover {
-    color: ${(props) => props.theme.colorPrimario};
-    background-color: ${(props) => props.theme.colorHover};
-    /* animation: ${shake} 2s infinite ease-in-out; */
-  }
-`;
+import { WelcomeDiv, WelcomeTitle } from "../styles";
 
 const PajarrakoWelcome = (props) => {
   const pajarrako =
@@ -56,9 +18,10 @@ const PajarrakoWelcome = (props) => {
     );
   return (
     <WelcomeDiv>
-      <Title>Manque Medina{pajarrako}</Title>
-
-      <Title style={{ fontSize: "1.72em" }}>WEB DEVELOPER Front-End</Title>
+      <WelcomeTitle>Manque Medina{pajarrako}</WelcomeTitle>
+      <WelcomeTitle style={{ fontSize: "1.72em" }}>
+        WEB DEVELOPER Front-End
+      </WelcomeTitle>
     </WelcomeDiv>
   );
 };
