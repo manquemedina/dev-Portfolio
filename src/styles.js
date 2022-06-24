@@ -5,20 +5,17 @@ import { slideIn, shakeAlt, bounce, shake } from "./animations";
 
 export const RoutesWrapper = styled.div`
   display: flex;
-  margin: 3em auto 0 auto;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
   color: ${(props) => props.theme.colorPrimario};
-  background-color: ${(props) => props.theme.colorPrimario};
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-color: ${(props) => props.theme.colorTerciario};
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
   background-attachment: fixed;
-  animation: ${slideIn} 1s 1 ease-in-out;
+  /* animation: ${slideIn} 1s 1 ease-in-out; */
 `;
 
-export const PageWrapper = styled.div`
-  /*   margin: 0;
-  font-family: "Bungee Shade", cursive;
-  font-size: 1em; */
-  animation: ${slideIn} 1s 1 ease-in-out;
-`;
 export const WelcomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -84,18 +81,18 @@ export const Nav = styled.nav`
   z-index: 2;
   position: fixed;
   top: 0;
+  height: 3em;
   display: flex;
-  flex-direction: row;
-  text-align: center;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: min-content;
-  background-color: ${(props) => props.theme.colorSecundario};
+  margin: 1em auto;
+
+  justify-content: center;
+
+  background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
-  font-family: "Bungee Shade", cursive;
-  font-size: 1.5em;
-  box-shadow: ${(props) => props.theme.BoxShadow};
+  font-family: "Bungee", cursive;
+  font-size: 1em;
+  /*  box-shadow: ${(props) => props.theme.BoxShadow}; */
   /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
 
   @media (max-width: 43em) {
@@ -368,11 +365,12 @@ export const Logo = styled.img`
 
 //TECNOLOGIAS
 
-export const TecnologiasTitle = styled.div`
+
+export const SectionTitle = styled.div`
   font-family: "Bungee Shade", cursive;
-  font-size: 1.5em;
-  /*   margin: 1em;
- */
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 3rem;
   animation: ${slideIn} 1s forwards ease-out;
 `;
 export const BackgroundDiv = styled.div`

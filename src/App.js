@@ -7,17 +7,11 @@ import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
 import { Tecnologias } from "./Components/tecnologias";
 import { ProyectCard } from "./Components/ProyectCard";
+import { Home } from "./Components/Home";
 import { themes } from "./themes";
 //import styles
-import {
-  RoutesWrapper,
-  PageWrapper,
-  WelcomeWrapper,
-  AboutWrapper,
-  TecnologíasWrapper,
-  TecnologiasTitle,
-  ProjectsWrapper,
-} from "./styles";
+import { RoutesWrapper, SectionTitle } from "./styles";
+import { SectionWrapper } from "./Components/Home";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -26,43 +20,62 @@ function App() {
   return (
     <ThemeProvider theme={themes[theme]}>
       {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
-      <Navbar
-        theme={theme}
-        setTheme={setTheme}
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-      />
+
       <RoutesWrapper>
         <Routes>
           <Route
             path="/"
             element={
-              <WelcomeWrapper>
-                <PajarrakoWelcome theme={theme} setTheme={setTheme} />
-              </WelcomeWrapper>
+              <SectionWrapper>
+                <Navbar
+                  theme={theme}
+                  setTheme={setTheme}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+                <Home />
+              </SectionWrapper>
             }
           />
           <Route
             path="/about"
             element={
-              <AboutWrapper>
+              <SectionWrapper>
+                <Navbar
+                  theme={theme}
+                  setTheme={setTheme}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
                 <About />
-              </AboutWrapper>
+              </SectionWrapper>
             }
           />
           <Route
             path="/tecnologias"
             element={
-              <TecnologíasWrapper>
+              <SectionWrapper>
+                <Navbar
+                  theme={theme}
+                  setTheme={setTheme}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
                 <Tecnologias />
-              </TecnologíasWrapper>
+              </SectionWrapper>
             }
           />
           <Route
             path="/proyectos"
             element={
-              <ProjectsWrapper>
-                <TecnologiasTitle>Projectos</TecnologiasTitle>
+              <SectionWrapper>
+                <Navbar
+                  theme={theme}
+                  setTheme={setTheme}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+                <SectionTitle>Projectos</SectionTitle>
                 <ProyectCard
                   title={"ToDo List"}
                   img={
@@ -85,7 +98,7 @@ function App() {
                   linkProject={"#"}
                   linkRepo={"#"}
                 />
-              </ProjectsWrapper>
+              </SectionWrapper>
             }
           />
           {/*         <Route path="/arte-diseño" element={<ArteDiseño />} />

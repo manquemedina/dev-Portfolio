@@ -34,7 +34,6 @@ export {
   ProyectCard,
   CardWrapper,
   Card,
-  CardTitle,
   ProjectImg,
   IconDiv,
   Icon,

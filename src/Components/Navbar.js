@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Nav, Toggle, A, ModalBtn } from "../styles";
+import { Nav, Toggle, ModalBtn } from "../styles";
 
 const Navbar = (props) => {
   function changeTheme() {
@@ -30,12 +30,24 @@ const Navbar = (props) => {
     );
   return (
     <Nav>
-      <Link to={"/"}>※</Link>
-      <Link to={"/about"}>Acerca de</Link>
-      <Link to={"/tecnologias"}>Tecnologias</Link>
-      <Link to={"/proyectos"}>Proyectos</Link>
-      <Link to={"/arte-diseño"}>Arte/Diseño</Link>
-      <Link to={"/contacto"}>Contacto</Link>
+      <Link to={"/"} style={{ margin: "0 0.75rem" }}>
+        ※Home
+      </Link>
+      <Link to={"/about"} style={{ margin: "0 0.75rem" }}>
+        Acerca de
+      </Link>
+      <Link to={"/tecnologias"} style={{ margin: "0 0.75rem" }}>
+        Tecnologias
+      </Link>
+      <Link to={"/proyectos"} style={{ margin: "0 0.75rem" }}>
+        Proyectos
+      </Link>
+      <Link to={"/arte-diseño"} style={{ margin: "0 0.75rem" }}>
+        Arte/Diseño
+      </Link>
+      <Link to={"/contacto"} style={{ margin: "0 0.75rem" }}>
+        Contacto
+      </Link>
       <ModalBtn onClick={handleClick}>※</ModalBtn>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
     </Nav>
