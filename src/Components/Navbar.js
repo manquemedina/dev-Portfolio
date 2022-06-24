@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Nav, Toggle, ModalBtn } from "../styles";
+import { Nav, Navlink, Toggle, ModalBtn } from "../styles";
 
 const Navbar = (props) => {
   function changeTheme() {
@@ -30,23 +30,38 @@ const Navbar = (props) => {
     );
   return (
     <Nav>
-      <Link to={"/"} style={{ margin: "0 0.75rem" }}>
+      {/*       <Link to={"/"} style={{ margin: "0 0.75rem" }}>
         ※Home
+      </Link> */}
+      <Link
+        to={"/about"}
+        style={{ margin: "0 0.75rem", textDecoration: "none" }}
+      >
+        <Navlink>Acerca de</Navlink>
       </Link>
-      <Link to={"/about"} style={{ margin: "0 0.75rem" }}>
-        Acerca de
+      <Link
+        to={"/tecnologias"}
+        style={{ margin: "0 0.75rem", textDecoration: "none" }}
+      >
+        <Navlink>Tecnologias</Navlink>
       </Link>
-      <Link to={"/tecnologias"} style={{ margin: "0 0.75rem" }}>
-        Tecnologias
+      <Link
+        to={"/proyectos"}
+        style={{ margin: "0 0.75rem", textDecoration: "none" }}
+      >
+        <Navlink>Proyectos</Navlink>
       </Link>
-      <Link to={"/proyectos"} style={{ margin: "0 0.75rem" }}>
-        Proyectos
+      <Link
+        to={"/arte-diseño"}
+        style={{ margin: "0 0.75rem", textDecoration: "none" }}
+      >
+        <Navlink>Arte/Diseño</Navlink>
       </Link>
-      <Link to={"/arte-diseño"} style={{ margin: "0 0.75rem" }}>
-        Arte/Diseño
-      </Link>
-      <Link to={"/contacto"} style={{ margin: "0 0.75rem" }}>
-        Contacto
+      <Link
+        to={"/contacto"}
+        style={{ margin: "0 0.75rem", textDecoration: "none" }}
+      >
+        <Navlink>Contacto</Navlink>
       </Link>
       <ModalBtn onClick={handleClick}>※</ModalBtn>
       <Toggle onClick={changeTheme}>{icon}</Toggle>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundDiv, SectionTitle, GridTecnologías } from "../styles";
+import { SectionTitle, GridTecnologías, TecnologiasWrapper } from "../styles";
 import {
   logoHTML,
   logoCSS,
@@ -14,7 +14,7 @@ import {
 //COMPONENTE
 const Tecnologias = () => {
   return (
-    <BackgroundDiv>
+    <TecnologiasWrapper>
       <SectionTitle>Tecnologías:</SectionTitle>
       <GridTecnologías>
         {logoHTML}
@@ -27,7 +27,7 @@ const Tecnologias = () => {
         {logoGitHub}
         {logoFigma}
       </GridTecnologías>
-    </BackgroundDiv>
+    </TecnologiasWrapper>
   );
 };
 

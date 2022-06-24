@@ -8,97 +8,67 @@ export const RoutesWrapper = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-
   color: ${(props) => props.theme.colorPrimario};
   background-color: ${(props) => props.theme.colorTerciario};
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
   background-attachment: fixed;
   /* animation: ${slideIn} 1s 1 ease-in-out; */
 `;
-
-export const WelcomeWrapper = styled.div`
+export const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  color: ${(props) => props.theme.colorPrimario};
-  background-color: ${(props) => props.theme.colorPrimario};
-  /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/light-wool.png"); */
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
-  background-attachment: fixed;
-`;
-export const AboutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
-  font-family: "Rubik", sans-serif;
-  font-size: 2em;
-  /* background-image: url("https://www.transparenttextures.com/patterns/light-wool.png"); */
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
-  background-color: ${(props) => props.theme.colorPrimario};
-  background-attachment: fixed;
-  color: ${(props) => props.theme.colorFuente};
-`;
-export const TecnologíasWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 2em;
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
-  background-color: ${(props) => props.theme.colorPrimario};
-  background-attachment: fixed;
-  color: ${(props) => props.theme.colorFuente};
-`;
-export const ProjectsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  margin: 1rem;
+  padding-top: 5rem;
   padding: 1rem;
-  font-size: 2em;
+  /*   width: 100%; */
+  /*   height: 100vh; */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
-  background-attachment: fixed;
   color: ${(props) => props.theme.colorFuente};
-  @media (max-width: 980px) {
-    flex-direction: column;
-  }
+  font-family: "Bungee", cursive;
+`;
+
+export const TecnologiasWrapper = styled.div`
+  width: 100vw;
 `;
 
 //NAVBAR
 
 export const Nav = styled.nav`
   z-index: 2;
-  position: fixed;
-  top: 0;
-  height: 3em;
   display: flex;
+  /*  position: fixed; */
+  top: 0;
   align-items: center;
-  margin: 1em auto;
-
   justify-content: center;
-
+  margin: 0 auto;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee", cursive;
-  font-size: 1em;
+  font-size: 1.2em;
   /*  box-shadow: ${(props) => props.theme.BoxShadow}; */
   /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
-
-  @media (max-width: 43em) {
+  @media (max-width: 38em) {
+    display: none;
   }
 `;
-
+export const Navlink = styled.a`
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: ${(props) => props.theme.colorFuente};
+  transition: all 1s ease;
+  :hover {
+    color: ${(props) => props.theme.colorPrimario};
+    background-color: ${(props) => props.theme.colorHover};
+    /* animation: ${shakeAlt} 0.7s ease forwards; */
+    animation: ${bounce} 2s infinite forwards ease-in-out;
+    animation-iteration-count: 1;
+  }
+  @media (max-width: 43em) {
+    /* display: none; */
+  }
+`;
 export const Toggle = styled.button`
   cursor: pointer;
   height: min-content;
@@ -109,7 +79,7 @@ export const Toggle = styled.button`
   background-color: ${(props) => props.theme.colorSecundario};
   color: ${(props) => props.theme.colorFuente};
   transition: all 0.5s ease;
-  @media (max-width: 43em) {
+  @media (max-width: 38em) {
     display: none;
   }
 `;
@@ -165,7 +135,7 @@ export const AboutImg = styled.img`
 `;
 export const AboutText = styled.div`
   font-family: "Bungee Hairline";
-  font-size: 1em;
+  font-size: 2em;
   font-weight: bolder;
   margin: 4em;
 `;
@@ -365,7 +335,12 @@ export const Logo = styled.img`
 
 //TECNOLOGIAS
 
-
+/* export const TecnologiasTitle = styled.div`
+  font-family: "Bungee Shade", cursive;
+  font-size: 1.5em;
+  text-align: center;
+  animation: ${slideIn} 1s forwards ease-out;
+`; */
 export const SectionTitle = styled.div`
   font-family: "Bungee Shade", cursive;
   font-size: 4.2rem;
@@ -386,10 +361,10 @@ export const BackgroundDiv = styled.div`
 `;
 export const GridTecnologías = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2.5em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(2.5em, 5fr));
   grid-auto-rows: minmax(2rem, 2fr);
-  grid-gap: 3rem;
-  width: 100%;
+  grid-gap: 1rem;
+  /* width: 100%; */
   margin: 6em auto;
 `;
 

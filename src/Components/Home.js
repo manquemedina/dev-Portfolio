@@ -2,18 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { slideIn } from "../animations";
 //estilos (después refactorizar)
-const SectionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 5rem;
-  padding: 1rem;
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
-  background-color: ${(props) => props.theme.colorPrimario};
-  color: ${(props) => props.theme.colorFuente};
-  font-family: "Bungee", cursive;
-`;
+import { SectionWrapper } from "../styles";
 const HomeTitle = styled.div`
   margin: 1rem;
   font-size: 5.2rem;
@@ -45,4 +34,4 @@ const Home = (props) => {
     </SectionWrapper>
   );
 };
-export { Home, SectionWrapper };
+export { Home };

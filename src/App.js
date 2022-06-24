@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Navbar } from "./Components/Navbar";
-import { PajarrakoWelcome } from "./Components/PajarrakoWelcome";
 import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
 import { Tecnologias } from "./Components/tecnologias";
@@ -10,8 +9,7 @@ import { ProyectCard } from "./Components/ProyectCard";
 import { Home } from "./Components/Home";
 import { themes } from "./themes";
 //import styles
-import { RoutesWrapper, SectionTitle } from "./styles";
-import { SectionWrapper } from "./Components/Home";
+import { RoutesWrapper, SectionWrapper, SectionTitle } from "./styles";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -20,19 +18,18 @@ function App() {
   return (
     <ThemeProvider theme={themes[theme]}>
       {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
-
+      <Navbar
+        theme={theme}
+        setTheme={setTheme}
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      />{" "}
       <RoutesWrapper>
         <Routes>
           <Route
             path="/"
             element={
               <SectionWrapper>
-                <Navbar
-                  theme={theme}
-                  setTheme={setTheme}
-                  openModal={openModal}
-                  setOpenModal={setOpenModal}
-                />
                 <Home />
               </SectionWrapper>
             }
@@ -41,12 +38,6 @@ function App() {
             path="/about"
             element={
               <SectionWrapper>
-                <Navbar
-                  theme={theme}
-                  setTheme={setTheme}
-                  openModal={openModal}
-                  setOpenModal={setOpenModal}
-                />
                 <About />
               </SectionWrapper>
             }
@@ -55,12 +46,6 @@ function App() {
             path="/tecnologias"
             element={
               <SectionWrapper>
-                <Navbar
-                  theme={theme}
-                  setTheme={setTheme}
-                  openModal={openModal}
-                  setOpenModal={setOpenModal}
-                />
                 <Tecnologias />
               </SectionWrapper>
             }
@@ -69,12 +54,6 @@ function App() {
             path="/proyectos"
             element={
               <SectionWrapper>
-                <Navbar
-                  theme={theme}
-                  setTheme={setTheme}
-                  openModal={openModal}
-                  setOpenModal={setOpenModal}
-                />
                 <SectionTitle>Projectos</SectionTitle>
                 <ProyectCard
                   title={"ToDo List"}
