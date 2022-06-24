@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Navbar } from "./Components/Navbar";
 import { PajarrakoWelcome } from "./Components/PajarrakoWelcome";
@@ -9,6 +10,7 @@ import { ProyectCard } from "./Components/ProyectCard";
 import { themes } from "./themes";
 //import styles
 import {
+  RoutesWrapper,
   PageWrapper,
   WelcomeWrapper,
   AboutWrapper,
@@ -23,51 +25,73 @@ function App() {
 
   return (
     <ThemeProvider theme={themes[theme]}>
-      <PageWrapper>
-        {openModal && (
-          <Modal openModal={openModal} setOpenModal={setOpenModal} />
-        )}
-        <WelcomeWrapper>
-          <Navbar
-            theme={theme}
-            setTheme={setTheme}
-            openModal={openModal}
-            setOpenModal={setOpenModal}
+      {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
+      <Navbar
+        theme={theme}
+        setTheme={setTheme}
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      />
+      <RoutesWrapper>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <WelcomeWrapper>
+                <PajarrakoWelcome theme={theme} setTheme={setTheme} />
+              </WelcomeWrapper>
+            }
           />
-          <PajarrakoWelcome theme={theme} setTheme={setTheme} />
-        </WelcomeWrapper>
-        <AboutWrapper>
-          <About />
-        </AboutWrapper>
-        <TecnologíasWrapper>
-          <Tecnologias />
-        </TecnologíasWrapper>
-        <ProjectsWrapper>
-          <TecnologiasTitle>Projectos</TecnologiasTitle>
-          <ProyectCard
-            title={"ToDo List"}
-            img={
-              "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+          <Route
+            path="/about"
+            element={
+              <AboutWrapper>
+                <About />
+              </AboutWrapper>
             }
-            descripcion={
-              "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
-            }
-            linkProject={"#"}
-            linkRepo={"#"}
           />
-          <ProyectCard
-            title={"ToDo List"}
-            img={
-              "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+          <Route
+            path="/tecnologias"
+            element={
+              <TecnologíasWrapper>
+                <Tecnologias />
+              </TecnologíasWrapper>
             }
-            descripcion={
-              "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
-            }
-            linkProject={"#"}
-            linkRepo={"#"}
           />
-        </ProjectsWrapper>
-      </PageWrapper>
+          <Route
+            path="/proyectos"
+            element={
+              <ProjectsWrapper>
+                <TecnologiasTitle>Projectos</TecnologiasTitle>
+                <ProyectCard
+                  title={"ToDo List"}
+                  img={
+                    "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+                  }
+                  descripcion={
+                    "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+                  }
+                  linkProject={"#"}
+                  linkRepo={"#"}
+                />
+                <ProyectCard
+                  title={"ToDo List"}
+                  img={
+                    "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+                  }
+                  descripcion={
+                    "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+                  }
+                  linkProject={"#"}
+                  linkRepo={"#"}
+                />
+              </ProjectsWrapper>
+            }
+          />
+          {/*         <Route path="/arte-diseño" element={<ArteDiseño />} />
+        <Route path="/contacto" element={<Contacto />} /> */}
+        </Routes>
+      </RoutesWrapper>
     </ThemeProvider>
   );
 }

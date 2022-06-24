@@ -3,6 +3,16 @@ import { slideIn, shakeAlt, bounce, shake } from "./animations";
 
 //WRAPPERS
 
+export const RoutesWrapper = styled.div`
+  display: flex;
+  margin: 3em auto 0 auto;
+  color: ${(props) => props.theme.colorPrimario};
+  background-color: ${(props) => props.theme.colorPrimario};
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
+  animation: ${slideIn} 1s 1 ease-in-out;
+`;
+
 export const PageWrapper = styled.div`
   /*   margin: 0;
   font-family: "Bungee Shade", cursive;

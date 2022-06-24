@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Nav, Toggle, A, ModalBtn } from "../styles";
 
 const Navbar = (props) => {
@@ -29,21 +30,12 @@ const Navbar = (props) => {
     );
   return (
     <Nav>
-      <A href="#" alt="">
-        Acerca de
-      </A>
-      <A href="#" alt="">
-        Tecnologias
-      </A>
-      <A href="#" alt="">
-        Proyectos
-      </A>
-      <A href="#" alt="">
-        Arte/Diseño
-      </A>
-      <A href="#" alt="">
-        Contacto
-      </A>
+      <Link to={"/"}>※</Link>
+      <Link to={"/about"}>Acerca de</Link>
+      <Link to={"/tecnologias"}>Tecnologias</Link>
+      <Link to={"/proyectos"}>Proyectos</Link>
+      <Link to={"/arte-diseño"}>Arte/Diseño</Link>
+      <Link to={"/contacto"}>Contacto</Link>
       <ModalBtn onClick={handleClick}>※</ModalBtn>
       <Toggle onClick={changeTheme}>{icon}</Toggle>
     </Nav>
