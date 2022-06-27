@@ -21,8 +21,8 @@ export const SectionWrapper = styled.div`
   margin: 0 auto;
   padding-top: 5rem;
   padding: 1rem;
-  /*   width: 100%; */
-  /*   height: 100vh; */
+  /*     width: 100%;
+  height: 100%; */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
@@ -30,7 +30,10 @@ export const SectionWrapper = styled.div`
 `;
 
 export const TecnologiasWrapper = styled.div`
+  align-items: center;
+  justify-content: center;
   width: 100vw;
+  height: 95vh;
 `;
 
 //NAVBAR
@@ -38,32 +41,34 @@ export const TecnologiasWrapper = styled.div`
 export const Nav = styled.nav`
   z-index: 2;
   display: flex;
-  /*  position: fixed; */
+  position: fixed;
   top: 0;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  padding: 1rem;
+  margin:0 auto;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee", cursive;
   font-size: 1.2em;
-  /*  box-shadow: ${(props) => props.theme.BoxShadow}; */
+  box-shadow: ${(props) => props.theme.BoxShadow};
   /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png"); */
-  @media (max-width: 38em) {
+  @media (max-width: 565px) {
     display: none;
   }
 `;
-export const Navlink = styled.a`
-  padding: 0.5rem;
+export const Navlink = styled.div`
+  padding: 0.25rem;
   border-radius: 10px;
   color: ${(props) => props.theme.colorFuente};
   transition: all 1s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
-    /* animation: ${shakeAlt} 0.7s ease forwards; */
+    /*     animation: ${shakeAlt} 0.7s ease forwards;
     animation: ${bounce} 2s infinite forwards ease-in-out;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
   }
   @media (max-width: 43em) {
     /* display: none; */
@@ -71,22 +76,23 @@ export const Navlink = styled.a`
 `;
 export const Toggle = styled.button`
   cursor: pointer;
-  height: min-content;
-  width: min-content;
-  margin: 1rem;
-  border-radius: 50%;
+  border-radius: 10px;
   border: none;
-  background-color: ${(props) => props.theme.colorSecundario};
+  /* padding: 0.5rem;
+  padding: 0.5rem; */
+  position: fixed;
+  right: 4rem;
+  background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
   transition: all 0.5s ease;
-  @media (max-width: 38em) {
+  @media (max-width: 685px) {
     display: none;
   }
 `;
 
 export const A = styled.a`
-  margin: 0.5rem;
-  padding: 0.5 1rem;
+  /*   margin: 0.5rem;
+  padding: 0.5 1rem; */
   width: 100%;
   border-radius: 10px;
   text-decoration: none;
@@ -115,11 +121,13 @@ export const ModalBtn = styled.div`
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
   }
-  @media (max-width: 43em) {
+  @media (max-width: 565px) {
     display: flex;
     position: fixed;
-    top: -18px;
-    right: 1rem;
+    margin: 0.5rem;
+    top: 0;
+    right: 2rem;
+    font-size: 5rem;
   }
 `;
 
@@ -143,10 +151,14 @@ export const AboutText = styled.div`
 //ICONOS TECNOLOGIAS
 
 export const LogoImg = styled.img`
-  width: 3.3em;
+  width: 7em;
+  margin: 2rem;
   transition: all 0.5s ease;
   :hover {
     animation: ${bounce} 4s infinite forwards ease-in-out;
+  }
+  @media (max-width: 470px) {
+    width: 5em;
   }
 `;
 
@@ -168,8 +180,8 @@ export const ModalWindow = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  /*   width: 100vw; */
   background-color: #888;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   color: black;
@@ -361,11 +373,13 @@ export const BackgroundDiv = styled.div`
 `;
 export const GridTecnologías = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2.5em, 5fr));
-  grid-auto-rows: minmax(2rem, 2fr);
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+  grid-auto-rows: minmax(50px, 100px);
   grid-gap: 1rem;
-  /* width: 100%; */
   margin: 6em auto;
+  /*   color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorSecundario}; */
 `;
 
 export const CardLinks = styled.img`
