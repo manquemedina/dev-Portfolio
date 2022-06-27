@@ -20,9 +20,8 @@ export const SectionWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   padding-top: 5rem;
-  padding: 1rem;
-  /*     width: 100%;
-  height: 100%; */
+  width: 100%;
+  /* height: 100%; */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
@@ -32,8 +31,8 @@ export const SectionWrapper = styled.div`
 export const TecnologiasWrapper = styled.div`
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 95vh;
+  /* width: 100%; */
+  height: 100vh;
 `;
 
 //NAVBAR
@@ -47,7 +46,7 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  margin:0 auto;
+  margin: 0 auto;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee", cursive;
@@ -355,16 +354,19 @@ export const Logo = styled.img`
 `; */
 export const SectionTitle = styled.div`
   font-family: "Bungee Shade", cursive;
-  font-size: 4.2rem;
+  font-size: 4rem;
   text-align: center;
   margin-top: 3rem;
   animation: ${slideIn} 1s forwards ease-out;
+  @media (max-width: 420px) {
+    font-size: 3rem;
+  }
 `;
 export const BackgroundDiv = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1em;
-  width: 100%;
+  /*  padding: 1em; */
+  /* width: 100%; */
   border-radius: 10px;
   color: ${(props) => props.theme.colorFuente};
   background-color: ${(props) => props.theme.colorSecundario};
@@ -372,14 +374,16 @@ export const BackgroundDiv = styled.div`
   transition: all 0.5s ease;
 `;
 export const GridTecnologías = styled.div`
-  display: grid;
   grid-auto-rows: auto;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
   grid-auto-rows: minmax(50px, 100px);
   grid-gap: 1rem;
   margin: 6em auto;
-  /*   color: ${(props) => props.theme.colorFuente};
-  background-color: ${(props) => props.theme.colorSecundario}; */
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(30px, 55px));
+    grid-auto-rows: minmax(30px, 100px);
+  }
 `;
 
 export const CardLinks = styled.img`
