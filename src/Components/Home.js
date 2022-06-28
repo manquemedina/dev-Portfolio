@@ -13,14 +13,14 @@ const Home = (props) => {
   const homeImg =
     props.theme === "light" ? (
       <img
-        style={{ width: "25rem" }}
-        src="https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+        style={{ width: "35rem" }}
+        src="https://github.com/manquemedina/img/blob/master/manosGalaxia.png?raw=true"
         alt=""
       />
     ) : (
       <img
-        style={{ width: "25rem" }}
-        src="https://github.com/manquemedina/img/blob/master/pajarrakoInverti2.png?raw=true"
+        style={{ width: "35rem" }}
+        src="https://github.com/manquemedina/img/blob/master/manosGalaxia.png?raw=true"
         alt=""
       />
     );
