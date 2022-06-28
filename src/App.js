@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Navbar } from "./Components/Navbar";
-import { About } from "./Components/About";
 import { Modal } from "./Components/Modal";
+import { Home } from "./Components/Home";
+import { About } from "./Components/About";
 import { Tecnologias } from "./Components/tecnologias";
 import { ProyectCard } from "./Components/ProyectCard";
-import { Home } from "./Components/Home";
+import { ArtCard } from "./Components/ArtCard";
+import { Arte } from "./Components/Arte";
+
 import { themes } from "./themes";
 //import styles
 import { RoutesWrapper, SectionWrapper, SectionTitle } from "./styles";
@@ -30,7 +33,7 @@ function App() {
             path="/"
             element={
               <SectionWrapper>
-                <Home />
+                <Home theme={theme} />
               </SectionWrapper>
             }
           />
@@ -58,7 +61,7 @@ function App() {
                 <ProyectCard
                   title={"ToDo List"}
                   img={
-                    "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+                    "https://github.com/manquemedina/img/blob/master/manoProyecto.png?raw=true"
                   }
                   descripcion={
                     "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
@@ -80,7 +83,21 @@ function App() {
               </SectionWrapper>
             }
           />
-          {/*         <Route path="/arte-diseño" element={<ArteDiseño />} />
+          <Route
+            path="/arte"
+            element={
+              <Arte>
+                <ArtCard
+                  cardTitle={"cardTitle"}
+                  imgSrc={
+                    "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                  }
+                  artInfo={"artInfo"}
+                />
+              </Arte>
+            }
+          />
+          {/*    
         <Route path="/contacto" element={<Contacto />} /> */}
         </Routes>
       </RoutesWrapper>

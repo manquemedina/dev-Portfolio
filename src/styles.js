@@ -21,7 +21,7 @@ export const SectionWrapper = styled.div`
   margin: 0 auto;
   padding-top: 5rem;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
@@ -31,8 +31,14 @@ export const SectionWrapper = styled.div`
 export const TecnologiasWrapper = styled.div`
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+`;
+export const ProyectosWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 //NAVBAR
@@ -128,6 +134,15 @@ export const ModalBtn = styled.div`
     right: 2rem;
     font-size: 5rem;
   }
+`;
+
+//HOME
+
+export const HomeTitle = styled.div`
+  margin: 1rem;
+  font-size: 5.2rem;
+  color: ${(props) => props.theme.colorHover};
+  animation: ${slideIn} 1s 1 ease-in-out;
 `;
 
 //ABOUT
@@ -260,6 +275,7 @@ export const WelcomeTitle = styled.div`
 export const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 1rem;
   @media (max-width: 43em) {
     flex-direction: column;
   }
@@ -374,8 +390,8 @@ export const BackgroundDiv = styled.div`
   transition: all 0.5s ease;
 `;
 export const GridTecnologías = styled.div`
-  grid-auto-rows: auto;
   display: grid;
+  grid-auto-rows: auto;
   align-items: center;
   justify-content: space-around;
   grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
@@ -392,3 +408,22 @@ export const CardLinks = styled.img`
   width: 3em;
   height: 3em;
 `;
+
+//ARTE Y DISEÑO
+
+export const GridArte = styled.div`
+  display: grid;
+  grid-auto-rows: auto;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+  grid-auto-rows: minmax(20rem, 30rem);
+  grid-gap: 1rem;
+  /* margin: 6em 0; */
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(30px, 55px));
+    grid-auto-rows: minmax(30px, 100px);
+  }
+`;
+
+export const ArtImg = styled.img``;

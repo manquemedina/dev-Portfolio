@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  CardWrapper,
+  ProyectosWrapper,
   Card,
   CardTitle,
   ProjectImg,
@@ -13,7 +13,7 @@ import { logoExternalLink, logoRepo } from "./logos";
 
 const ProyectCard = (props) => {
   return (
-    <CardWrapper>
+    <ProyectosWrapper>
       <Card>
         <CardTitle>{props.title}</CardTitle>
         <ProjectImg src={props.img} />
@@ -27,12 +27,12 @@ const ProyectCard = (props) => {
       <Descripcion>
         <PDescripcion>{props.descripcion}</PDescripcion>
       </Descripcion>
-    </CardWrapper>
+    </ProyectosWrapper>
   );
 };
 export {
   ProyectCard,
-  CardWrapper,
+  /* CardWrapper, */
   Card,
   ProjectImg,
   IconDiv,

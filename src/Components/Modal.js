@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { ModalDiv, ModalWindowBtn, ModalWindow, MLink } from "../styles";
 
-function Modal(props) {
+const Modal = (props) => {
   const handleClick = () => {
     props.setOpenModal(false);
   };
@@ -44,7 +44,7 @@ function Modal(props) {
           <MLink>Proyectos</MLink>
         </Link>
         <Link
-          to={"/arte-diseño"}
+          to={"/arte"}
           style={{ margin: "0 0.75rem", textDecoration: "none" }}
         >
           <MLink>Arte/Diseño</MLink>
@@ -60,6 +60,6 @@ function Modal(props) {
     </ModalDiv>,
     document.getElementById("modal")
   );
-}
+};
 
 export { Modal };

@@ -32,9 +32,10 @@ const Navbar = (props) => {
     <>
       {" "}
       <Nav>
-        {/*       <Link to={"/"} style={{ margin: "0 0.75rem" }}>
-        ※Home
-      </Link> */}
+        {" "}
+        <Link to={"/"} style={{ margin: "0 0.75rem", textDecoration: "none" }}>
+          <Navlink>※</Navlink>
+        </Link>
         <Link
           to={"/about"}
           style={{ margin: "0 0.75rem", textDecoration: "none" }}
@@ -45,7 +46,7 @@ const Navbar = (props) => {
           to={"/tecnologias"}
           style={{ margin: "0 0.75rem", textDecoration: "none" }}
         >
-          <Navlink>Tecnologias</Navlink>
+          <Navlink>Tecnologías</Navlink>
         </Link>
         <Link
           to={"/proyectos"}
