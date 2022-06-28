@@ -31,7 +31,7 @@ export const SectionWrapper = styled.div`
 export const TecnologiasWrapper = styled.div`
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
+  width: 100%;
   height: 100vh;
 `;
 
@@ -80,7 +80,7 @@ export const Toggle = styled.button`
   /* padding: 0.5rem;
   padding: 0.5rem; */
   position: fixed;
-  right: 4rem;
+  right: 3rem;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
   transition: all 0.5s ease;
@@ -114,7 +114,7 @@ export const ModalBtn = styled.div`
   display: none;
   border-radius: 10px;
   font-size: 3em;
-
+  color: ${(props) => props.theme.colorFuente};
   transition: all 0.5s ease;
   :hover {
     color: ${(props) => props.theme.colorPrimario};
@@ -211,7 +211,7 @@ export const MLink = styled.a`
   :hover {
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
-    animation: ${shakeAlt} 0.7s ease forwards;
+    animation: ${bounce} 0.7s ease forwards;
     animation-iteration-count: 1;
   }
 `;
@@ -376,10 +376,12 @@ export const BackgroundDiv = styled.div`
 export const GridTecnologías = styled.div`
   grid-auto-rows: auto;
   display: grid;
+  align-items: center;
+  justify-content: space-around;
   grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
   grid-auto-rows: minmax(50px, 100px);
   grid-gap: 1rem;
-  margin: 6em auto;
+  margin: 6em 0;
   @media (max-width: 470px) {
     grid-template-columns: repeat(auto-fit, minmax(30px, 55px));
     grid-auto-rows: minmax(30px, 100px);
