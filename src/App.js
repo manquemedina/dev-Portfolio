@@ -12,7 +12,12 @@ import { Arte } from "./Components/Arte";
 
 import { themes } from "./themes";
 //import styles
-import { RoutesWrapper, SectionWrapper, SectionTitle } from "./styles";
+import {
+  PageWrapper,
+  RoutesWrapper,
+  SectionWrapper,
+  SectionTitle,
+} from "./styles";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -21,86 +26,89 @@ function App() {
   return (
     <ThemeProvider theme={themes[theme]}>
       {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
-      <Navbar
-        theme={theme}
-        setTheme={setTheme}
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-      />{" "}
-      <RoutesWrapper>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <SectionWrapper>
-                <Home theme={theme} />
-              </SectionWrapper>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <SectionWrapper>
-                <About />
-              </SectionWrapper>
-            }
-          />
-          <Route
-            path="/tecnologias"
-            element={
-              <SectionWrapper>
-                <Tecnologias />
-              </SectionWrapper>
-            }
-          />
-          <Route
-            path="/proyectos"
-            element={
-              <SectionWrapper>
-                <SectionTitle>Projectos</SectionTitle>
-                <ProyectCard
-                  title={"ToDo List"}
-                  img={
-                    "https://github.com/manquemedina/img/blob/master/manoProyecto.png?raw=true"
-                  }
-                  descripcion={
-                    "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
-                  }
-                  linkProject={"#"}
-                  linkRepo={"#"}
-                />
-                <ProyectCard
-                  title={"ToDo List"}
-                  img={
-                    "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
-                  }
-                  descripcion={
-                    "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
-                  }
-                  linkProject={"#"}
-                  linkRepo={"#"}
-                />
-              </SectionWrapper>
-            }
-          />
-          <Route
-            path="/arte"
-            element={
-              <Arte>
-                <ArtCard
-                  cardTitle={"cardTitle"}
-                  imgSrc={
-                    "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
-                  }
-                  artInfo={"artInfo"}
-                />
-              </Arte>
-            }
-          />
-          {/*    
+      <PageWrapper>
+        <Navbar
+          theme={theme}
+          setTheme={setTheme}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />{" "}
+        {/* HAY UN HACK INTERESANTE SI SACAMOS LA IMAGEN DE FONDO DE <SectionWrapper> y lo ponemos en el contenedor específico de cada sección, porque scrollea y se superpone con el background del body, se podría experimentar */}
+        <RoutesWrapper>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <SectionWrapper>
+                  <Home theme={theme} />
+                </SectionWrapper>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <SectionWrapper>
+                  <About />
+                </SectionWrapper>
+              }
+            />
+            <Route
+              path="/tecnologias"
+              element={
+                <SectionWrapper>
+                  <Tecnologias />
+                </SectionWrapper>
+              }
+            />
+            <Route
+              path="/proyectos"
+              element={
+                <SectionWrapper>
+                  <SectionTitle>Projectos</SectionTitle>
+                  <ProyectCard
+                    title={"ToDo List"}
+                    img={
+                      "https://github.com/manquemedina/img/blob/master/manoProyecto.png?raw=true"
+                    }
+                    descripcion={
+                      "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+                    }
+                    linkProject={"#"}
+                    linkRepo={"#"}
+                  />
+                  <ProyectCard
+                    title={"ToDo List"}
+                    img={
+                      "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+                    }
+                    descripcion={
+                      "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+                    }
+                    linkProject={"#"}
+                    linkRepo={"#"}
+                  />
+                </SectionWrapper>
+              }
+            />
+            <Route
+              path="/arte"
+              element={
+                <Arte>
+                  <ArtCard
+                    cardTitle={"cardTitle"}
+                    imgSrc={
+                      "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />
+                </Arte>
+              }
+            />
+            {/*    
         <Route path="/contacto" element={<Contacto />} /> */}
-        </Routes>
-      </RoutesWrapper>
+          </Routes>
+        </RoutesWrapper>
+      </PageWrapper>
     </ThemeProvider>
   );
 }

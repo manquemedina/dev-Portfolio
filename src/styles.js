@@ -3,14 +3,22 @@ import { slideIn, shakeAlt, bounce, shake } from "./animations";
 
 //WRAPPERS
 
+export const PageWrapper = styled.div`
+  display: flex;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-color: ${(props) => props.theme.colorPrimario};
+  color: ${(props) => props.theme.colorFuente};
+`;
+
 export const RoutesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
   color: ${(props) => props.theme.colorPrimario};
-  background-color: ${(props) => props.theme.colorTerciario};
+  background-color: ${(props) => props.theme.colorSecundario};
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
   background-attachment: fixed;
   /* animation: ${slideIn} 1s 1 ease-in-out; */
 `;
@@ -18,10 +26,10 @@ export const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  justify-content: center;
   padding-top: 5rem;
   width: 100%;
-  height: 100%;
+  /*  height: 100%; */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
@@ -29,8 +37,6 @@ export const SectionWrapper = styled.div`
 `;
 
 export const TecnologiasWrapper = styled.div`
-  align-items: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
 `;
@@ -38,7 +44,8 @@ export const ProyectosWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  margin: 1rem;
+  /*  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
 `;
 
 //NAVBAR
@@ -276,6 +283,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin: 1rem;
+  height: 100%;
   @media (max-width: 43em) {
     flex-direction: column;
   }
