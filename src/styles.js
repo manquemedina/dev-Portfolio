@@ -31,6 +31,7 @@ export const SectionWrapper = styled.div`
   width: 100%;
   /*  height: 100%; */
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
   font-family: "Bungee", cursive;
@@ -312,6 +313,7 @@ export const Card = styled.div`
   }
 `;
 export const CardTitle = styled.h3`
+  margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: ${(props) => props.theme.BoxShadow};
@@ -421,27 +423,57 @@ export const CardLinks = styled.img`
 
 export const GridArte = styled.div`
   display: grid;
-  grid-auto-rows: auto;
-  align-items: center;
-  justify-content: space-around;
-  grid-template-rows: repeat(2fr);
-  /* grid-auto-columns: minmax(20rem, 30rem); */
-  grid-gap: 1rem;
+  /* width: 100%; */
+  //DEFINIR GRID!!!!
+  /* grid-template-columns: 50% 50%; */
+  grid-template-columns: 33% 33% 33%;
+  /* grid-template-rows: 2fr; */
+  /* align-items: center; */
+  /* align-content: space-around; */
+  justify-content: center;
+  grid-template-rows: repeat(auto-fit, minmax(1fr, 3fr));
+  grid-auto-columns: repeat(auto-fit, minmax(1fr, 3fr));
+  grid-gap: 3rem;
   /* margin: 6em 0; */
-  @media (max-width: 470px) {
-    grid-template-columns: repeat(auto-fit, minmax(30px, 55px));
-    grid-auto-rows: minmax(30px, 100px);
+  @media (max-width: 780px) {
+    grid-template-columns: 50% 50%;
+    /*   grid-auto-rows: minmax(30px, 100px); */
+  }
+  @media (max-width: 620px) {
+    grid-template-columns: 100%;
+    /*   grid-auto-rows: minmax(30px, 100px); */
   }
 `;
 
 export const ArtCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
   text-align: center;
-  background-image: unset;
+  /* background-image: unset; */
+  background: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
 `;
 
+export const ArtCardTitle = styled.h3`
+  width: fit-content;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  background-color: ${(props) => props.theme.colorHover};
+  color: ${(props) => props.theme.colorFuente};
+`;
+//acá hay tela para cortar con el tamaño de img, grid, y el fondo que se chinguea
 export const ArtImg = styled.img`
-  height: 18rem;
+  /* max-height: 35rem; */
+  //avel que onda ésto del object-fit!
+  object-fit: scale-down;
+  /* object-fit: cover; */
+  max-height: 32rem;
+  /* height: 100%; */
+  border-radius: 10px;
 `;

@@ -9,6 +9,7 @@ import { Tecnologias } from "./Components/Tecnologias";
 import { ProyectCard } from "./Components/ProyectCard";
 import { ArtCard } from "./Components/ArtCard";
 import { Arte } from "./Components/Arte";
+import { Contacto } from "./Components/Contacto";
 
 import { themes } from "./themes";
 //import styles
@@ -68,7 +69,7 @@ function App() {
                   <ProyectCard
                     title={"ToDo List"}
                     img={
-                      "https://github.com/manquemedina/img/blob/master/manoProyecto.png?raw=true"
+                      "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
                     }
                     descripcion={
                       "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
@@ -95,31 +96,100 @@ function App() {
               element={
                 <Arte>
                   <ArtCard
-                    cardTitle={"cardTitle"}
+                    cardTitle={"DummieKoi"}
                     imgSrc={
-                      "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/Dummie.png?raw=true"
                     }
                     artInfo={"artInfo"}
                   />
                   <ArtCard
-                    cardTitle={"cardTitle"}
+                    cardTitle={"DummieKoi - 2"}
                     imgSrc={
-                      "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/Dummie2.png?raw=true"
                     }
                     artInfo={"artInfo"}
                   />
                   <ArtCard
-                    cardTitle={"cardTitle"}
+                    cardTitle={"Chacal - 1"}
                     imgSrc={
-                      "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/Chacal1.png?raw=true"
                     }
                     artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Chacal - 2"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/Chacal2.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Chacal - 3"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/Chacal3.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Chacal/Sakura - 1"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/ChacalSakura1.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Chacal/Sakura - 2"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/ChacalSakura2.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Chacal/Sakura - 3"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/ChacalSakura3.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Cuchillo"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/Cuchillo.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Cuchillo/Calaca"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/CuchilloCalaca.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Cuchillo/Calaca/Corazón"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/CuchilloCalacaGeom.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />{" "}
+                  <ArtCard
+                    cardTitle={"Zorro"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/ZorroByN.png?raw=true"
+                    }
+                    artInfo={"Art Info"}
+                  />
+                  <ArtCard
+                    cardTitle={"Zorro"}
+                    imgSrc={
+                      "https://github.com/manquemedina/ImgsGaleria/blob/master/ZorroColor.png?raw=true"
+                    }
+                    artInfo={"Art Info"}
                   />
                 </Arte>
               }
             />
-            {/*    
-        <Route path="/contacto" element={<Contacto />} /> */}
+            <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </RoutesWrapper>
       </PageWrapper>

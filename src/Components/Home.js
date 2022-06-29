@@ -5,13 +5,13 @@ const Home = (props) => {
   const homeImg =
     props.theme === "light" ? (
       <img
-        style={{ width: "35rem", paddingBottom: "12rem"}}
+        style={{ width: "40rem", paddingBottom: "12rem"}}
         src="https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
         alt=""
       />
     ) : (
       <img
-        style={{ width: "35rem", paddingBottom: "12rem"}}
+        style={{ width: "40rem", paddingBottom: "12rem"}}
         src="https://github.com/manquemedina/img/blob/master/manosDark.png?raw=true"
         alt=""
       />
