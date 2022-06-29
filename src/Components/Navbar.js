@@ -55,7 +55,7 @@ const Navbar = (props) => {
           <Navlink>Proyectos</Navlink>
         </Link>
         <Link
-          to={"/arte-diseño"}
+          to={"/arte"}
           style={{ margin: "0 0.75rem", textDecoration: "none" }}
         >
           <Navlink>Arte/Diseño</Navlink>

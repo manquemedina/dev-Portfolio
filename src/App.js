@@ -5,7 +5,7 @@ import { Navbar } from "./Components/Navbar";
 import { Modal } from "./Components/Modal";
 import { Home } from "./Components/Home";
 import { About } from "./Components/About";
-import { Tecnologias } from "./Components/tecnologias";
+import { Tecnologias } from "./Components/Tecnologias";
 import { ProyectCard } from "./Components/ProyectCard";
 import { ArtCard } from "./Components/ArtCard";
 import { Arte } from "./Components/Arte";
@@ -32,7 +32,7 @@ function App() {
           setTheme={setTheme}
           openModal={openModal}
           setOpenModal={setOpenModal}
-        />{" "}
+        />
         {/* HAY UN HACK INTERESANTE SI SACAMOS LA IMAGEN DE FONDO DE <SectionWrapper> y lo ponemos en el contenedor específico de cada sección, porque scrollea y se superpone con el background del body, se podría experimentar */}
         <RoutesWrapper>
           <Routes>
@@ -94,6 +94,20 @@ function App() {
               path="/arte"
               element={
                 <Arte>
+                  <ArtCard
+                    cardTitle={"cardTitle"}
+                    imgSrc={
+                      "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />
+                  <ArtCard
+                    cardTitle={"cardTitle"}
+                    imgSrc={
+                      "https://github.com/manquemedina/img/blob/master/manosLight.png?raw=true"
+                    }
+                    artInfo={"artInfo"}
+                  />
                   <ArtCard
                     cardTitle={"cardTitle"}
                     imgSrc={

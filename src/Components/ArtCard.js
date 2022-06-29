@@ -1,12 +1,12 @@
 import React from "react";
-import { CardTitle, PDescripcion, ArtImg } from "../styles";
+import { CardTitle, PDescripcion, ArtImg, ArtCardWrapper } from "../styles";
 const ArtCard = (props) => {
   return (
-    <><h1>dsadsad</h1>
+    <ArtCardWrapper>
       <CardTitle>{props.cardTitle}</CardTitle>
       <ArtImg src={props.imgSrc} />
       <PDescripcion>{props.artInfo}</PDescripcion>
-    </>
+    </ArtCardWrapper>
   );
 };
 

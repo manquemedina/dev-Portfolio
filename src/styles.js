@@ -424,8 +424,8 @@ export const GridArte = styled.div`
   grid-auto-rows: auto;
   align-items: center;
   justify-content: space-around;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
-  grid-auto-rows: minmax(20rem, 30rem);
+  grid-template-rows: repeat(2fr);
+  /* grid-auto-columns: minmax(20rem, 30rem); */
   grid-gap: 1rem;
   /* margin: 6em 0; */
   @media (max-width: 470px) {
@@ -434,4 +434,14 @@ export const GridArte = styled.div`
   }
 `;
 
-export const ArtImg = styled.img``;
+export const ArtCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  text-align: center;
+  background-image: unset;
+`;
+
+export const ArtImg = styled.img`
+  height: 18rem;
+`;
