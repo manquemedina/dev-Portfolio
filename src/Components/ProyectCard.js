@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ProyectosWrapper,
   Card,
@@ -18,10 +19,17 @@ const ProyectCard = (props) => {
         <CardTitle>{props.title}</CardTitle>
         <ProjectImg src={props.img} />
         <IconDiv>
-          <Icon href={props.linkProject} target={"blank"}>
-            {logoExternalLink}
+          {" "}
+          <Icon>
+            <a target={"_blank"} href={props.linkRepo}>
+              {logoRepo}
+            </a>
           </Icon>
-          <Icon href={props.linkRepo}>{logoRepo}</Icon>
+          <Icon>
+            <a target={"_blank"} href={props.linkProject}>
+              {logoExternalLink}
+            </a>
+          </Icon>
         </IconDiv>
       </Card>
       <Descripcion>

@@ -297,7 +297,7 @@ export const CardWrapper = styled.div`
   }
 `;
 export const Card = styled.div`
-  width: 45%;
+  /* width: 45%; */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -328,7 +328,8 @@ export const CardTitle = styled.h3`
   color: ${(props) => props.theme.colorFuente};
 `;
 export const ProjectImg = styled.img`
-  width: 14rem;
+  height: 30rem;
+  border-radius: 10px;
 `;
 export const IconDiv = styled.div`
   display: flex;
@@ -337,6 +338,7 @@ export const IconDiv = styled.div`
   justify-content: space-evenly;
   background-color: ${(props) => props.theme.colorSecundario};
   padding: 1rem;
+  margin-top: 1rem;
   width: 100%;
   height: fit-content;
 `;
@@ -502,7 +504,7 @@ export const ArtImg = styled.img`
   :hover {
     transform: scale(1.7);
     z-index: 1;
-   /*  background-color: ${(props) => props.theme.colorHover}; */
+    /*  background-color: ${(props) => props.theme.colorHover}; */
     margin: 0 auto;
   }
 `;

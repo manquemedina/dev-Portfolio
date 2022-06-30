@@ -69,24 +69,13 @@ function App() {
                   <ProyectCard
                     title={"ToDo List"}
                     img={
-                      "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
+                      "https://github.com/manquemedina/img/blob/master/AppNotasScreenshot.jpeg?raw=true"
                     }
                     descripcion={
-                      "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
+                      "Clásica app tipo block de notas, permite crear tareas, buscar entre ellas, eliminarlas o marcarlas como completadas. Desarrollada con React y estilada con styledComponents."
                     }
-                    linkProject={"#"}
-                    linkRepo={"#"}
-                  />
-                  <ProyectCard
-                    title={"ToDo List"}
-                    img={
-                      "https://github.com/manquemedina/img/blob/master/sketch1653311245669.png?raw=true"
-                    }
-                    descripcion={
-                      "Clásica app para anotar tareas. Manejo de estado, hooks y persistencia de datos en LocalStorage. Desarrollada con React y estilada con styledComponents"
-                    }
-                    linkProject={"#"}
-                    linkRepo={"#"}
+                    linkProject={"https://manquemedina.github.io/TodoMachine/"}
+                    linkRepo={"https://github.com/manquemedina/TodoMachine"}
                   />
                 </SectionWrapper>
               }
