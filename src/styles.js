@@ -30,11 +30,11 @@ export const SectionWrapper = styled.div`
   padding-top: 5rem;
   width: 100%;
   /*  height: 100%; */
+  font-family: "Bungee", cursive;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-attachment: fixed;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
-  font-family: "Bungee", cursive;
 `;
 
 export const TecnologiasWrapper = styled.div`
@@ -365,6 +365,11 @@ export const PDescripcion = styled.p`
   font-size: 1.5rem;
   font-weight: bolder;
 `;
+export const ArtInfo = styled.p`
+  font-family: "Bungee Hairline";
+  font-size: 1rem;
+  font-weight: bold;
+`;
 export const Logo = styled.img`
   width: 2em;
   margin: 1rem;
@@ -456,6 +461,14 @@ export const ArtCardWrapper = styled.div`
   background: url("https://www.transparenttextures.com/patterns/cartographer.png");
   background-attachment: fixed;
   box-shadow: ${(props) => props.theme.BoxShadow};
+  transition: all 0.35s ease;
+  @media (min-width: 770px) {
+    :hover {
+      transform: scale(1.8);
+      z-index: 1;
+      background-color: ${(props) => props.theme.colorHover};
+    }
+  }
 `;
 
 export const ArtCardTitle = styled.h3`
@@ -474,6 +487,6 @@ export const ArtImg = styled.img`
   object-fit: scale-down;
   /* object-fit: cover; */
   max-height: 32rem;
-  /* height: 100%; */
+  margin-top: 1.5rem;
   border-radius: 10px;
 `;

@@ -82,16 +82,5 @@ const slideIn = keyframes`
     opacity:1;
   }
 `;
-const slideInNube = keyframes`
-0% {
-  top: 23%;
-    right: -600px;
-    
-  }
-100% {
-  top: 23%;
-  right: 18%;
-  }
-`;
 
-export { textBlur, shake, shakeAlt, slideIn, slideInNube, bounce };
+export { textBlur, shake, shakeAlt, slideIn, bounce };

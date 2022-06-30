@@ -1,11 +1,11 @@
 import React from "react";
-import { ArtCardTitle, PDescripcion, ArtImg, ArtCardWrapper } from "../styles";
+import { /* ArtCardTitle, */ ArtInfo, ArtImg, ArtCardWrapper } from "../styles";
 const ArtCard = (props) => {
   return (
     <ArtCardWrapper>
-      <ArtCardTitle>{props.cardTitle}</ArtCardTitle>
+      {/* <ArtCardTitle>{props.cardTitle}</ArtCardTitle> */}
       <ArtImg src={props.imgSrc} />
-      <PDescripcion>{props.artInfo}</PDescripcion>
+      <ArtInfo>{props.artInfo}</ArtInfo>
     </ArtCardWrapper>
   );
 };

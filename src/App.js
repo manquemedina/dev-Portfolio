@@ -100,91 +100,91 @@ function App() {
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/Dummie.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"DummieKoi - disponible"}
                   />
                   <ArtCard
                     cardTitle={"DummieKoi - 2"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/Dummie2.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"DummieKoi/2 disponible"}
                   />
                   <ArtCard
                     cardTitle={"Chacal - 1"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/Chacal1.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Chacal/1 - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Chacal - 2"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/Chacal2.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Chacal/2 - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Chacal - 3"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/Chacal3.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Chacal/3 - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Chacal/Sakura - 1"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/ChacalSakura1.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Chacal-Sakuras/1 - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Chacal/Sakura - 2"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/ChacalSakura2.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Chacal-Sakuras/2 - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Chacal/Sakura - 3"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/ChacalSakura3.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Chacal-Sakuras/3 - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Cuchillo"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/Cuchillo.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Cuchillo - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Cuchillo/Calaca"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/CuchilloCalaca.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Cuchillo/Calaca - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Cuchillo/Calaca/Corazón"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/CuchilloCalacaGeom.png?raw=true"
                     }
-                    artInfo={"artInfo"}
+                    artInfo={"Cuchillo/Calaca/Corazón - disponible"}
                   />{" "}
                   <ArtCard
                     cardTitle={"Zorro"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/ZorroByN.png?raw=true"
                     }
-                    artInfo={"Art Info"}
+                    artInfo={"Zorro - disponible"}
                   />
                   <ArtCard
                     cardTitle={"Zorro"}
                     imgSrc={
                       "https://github.com/manquemedina/ImgsGaleria/blob/master/ZorroColor.png?raw=true"
                     }
-                    artInfo={"Art Info"}
+                    artInfo={"Zorro Color - disponible"}
                   />
                 </Arte>
               }
