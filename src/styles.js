@@ -161,7 +161,14 @@ export const Title = styled.div`
   margin: 1em;
 `;
 export const AboutImg = styled.img`
+  object-fit: contain;
+  max-height: 40rem;
   margin: 1em;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  @media (max-width: 430px) {
+    max-height: 28rem;
+  }
 `;
 export const AboutText = styled.div`
   font-family: "Bungee Hairline";
@@ -462,12 +469,13 @@ export const ArtCardWrapper = styled.div`
   background-attachment: fixed;
   box-shadow: ${(props) => props.theme.BoxShadow};
   transition: all 0.35s ease;
+  //hover de toda la card
   @media (min-width: 770px) {
-    :hover {
+    /*     :hover {
       transform: scale(1.8);
       z-index: 1;
       background-color: ${(props) => props.theme.colorHover};
-    }
+    } */
   }
 `;
 
@@ -489,4 +497,12 @@ export const ArtImg = styled.img`
   max-height: 32rem;
   margin-top: 1.5rem;
   border-radius: 10px;
+  transition: all 0.35s ease;
+  //hover solo img
+  :hover {
+    transform: scale(1.7);
+    z-index: 1;
+   /*  background-color: ${(props) => props.theme.colorHover}; */
+    margin: 0 auto;
+  }
 `;

@@ -38,8 +38,10 @@ const DarkTheme = {
   colorTerciario: "#777",
   colorFuente: "#fff",
   colorHover: "#6443B2",
+  /*   BoxShadow:
+    "rgba(240164,176,255,0.55) 0px 1px 0px 0px,rgba(255,255,255,0.45) 0px 1px 0px 1px", */
   BoxShadow:
-    "rgba(240164,176,255,0.55) 0px 1px 0px 0px,rgba(255,255,255,0.45) 0px 1px 0px 1px",
+    "rgba(110, 64, 167, 0.4) 0px 1px 2px 2px,rgba(60, 64, 97, 0.45) 1px 1px 3px 1px",
 };
 /* {box-shadow: -2px 4px 3px 0px rgba(164,76,255,0.75);
 -webkit-box-shadow: -2px 4px 3px 0px rgba(164,76,255,0.75);
