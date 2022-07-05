@@ -1,43 +1,40 @@
 import { useState } from "react";
 import { db } from "../firebase-config";
-import { collection, getDocs } from "firebase/firestore";
-
+import { collection, addDoc } from "firebase/firestore";
+import { SectionTitle, SectionWrapper } from "../styles";
 const Contacto = () => {
   //estado para almacenar el user input (en react el componente contacto controla el formulario, no el DOM)
-  const [inputs, setInputs] = useState([]);
 
+  const [newName, setNewName] = useState("");
+  const [newEmail, setNewEmail] = useState("");
+  const [newMessage, setNewMessage] = useState("");
   //la linea de abajo crea el vínculo entre el estado del componente y la db de firestore
   const inputsRef = collection(db, "contacto");
 
-  const getInputs = async () => {
-    const data = await getDocs(inputsRef);
-    console.log(data.docs);
-  };
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const email = event.target.email;
-    const message = event.target.message;
-    setInputs((values) => ({ ...values, [name]: [email][message] }));
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(inputs);
-
-    getInputs();
+    createContact();
   };
+
+  const createContact = async () => {
+    await addDoc(inputsRef, {
+      name: newName,
+      email: newEmail,
+      message: newMessage,
+    });
+  };
+
   return (
-    <>
+    <SectionWrapper>
+      <SectionTitle>Contacto</SectionTitle>
       <form onSubmit={handleSubmit}>
         <label>
           Nombre
           <input
             type={"text"}
             name={"name"}
-            /* value={"name"} */
             placeholder="Nombre"
-            onChange={handleChange}
+            onChange={(event) => setNewName(event.target.value)}
           />
         </label>
         <label>
@@ -45,9 +42,8 @@ const Contacto = () => {
           <input
             type={"email"}
             name={"email"}
-            /* value={"email"} */
             placeholder="Email"
-            onChange={handleChange}
+            onChange={(event) => setNewEmail(event.target.value)}
           />
         </label>
         <label>
@@ -55,14 +51,13 @@ const Contacto = () => {
           <textarea
             type={"text"}
             name={"message"}
-            /* value={"message"} */
             placeholder="Mensaje"
-            onChange={handleChange}
+            onChange={(event) => setNewMessage(event.target.value)}
           />
         </label>
         <button type="submit">Enviar</button>
       </form>
-    </>
+    </SectionWrapper>
   );
 };
 

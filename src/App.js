@@ -28,12 +28,12 @@ function App() {
     <ThemeProvider theme={themes[theme]}>
       {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
       <PageWrapper>
-{/*         <Navbar
+{        <Navbar
           theme={theme}
           setTheme={setTheme}
           openModal={openModal}
           setOpenModal={setOpenModal}
-        /> */}
+        />}
         <RoutesWrapper>
           <Routes>
             <Route
