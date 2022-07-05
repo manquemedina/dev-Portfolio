@@ -508,3 +508,62 @@ export const ArtImg = styled.img`
     margin: 0 auto;
   }
 `;
+
+//CONTACTO
+export const ContactoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
+  background-color: ${(props) => props.theme.colorPrimario};
+  color: ${(props) => props.theme.colorFuente};
+`;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
+export const FormBg = styled.div`
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  margin: 4rem;
+  border-radius: 10px;
+  background-color: ${(props) => props.theme.colorHover};
+  box-shadow: ${(props) => props.theme.BoxShadow};
+`;
+export const Input = styled.input`
+  width: 85%;
+  margin: 2rem;
+  height: 3rem;
+  font-size: large;
+  font-family: "Bungee", cursive;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+`;
+export const TextArea = styled.textarea`
+  margin: 2rem;
+  width: 85%;
+  height: 12rem;
+  font-size: large;
+  font-family: "Bungee", cursive;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+`;
+export const ContactButton = styled.button`
+  font-size: x-large;
+  font-family: "Bungee", cursive;
+  margin: 1rem;
+  padding: 1rem;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  background-attachment: fixed;
+  background-color: ${(props) => props.theme.colorPrimario};
+  color: ${(props) => props.theme.colorFuente};
+  :hover {
+    color: ${(props) => props.theme.colorPrimario};
+    background-color: ${(props) => props.theme.colorFuente};
+    animation: ${shake} 0.3s 1 ease-in-out;
+  }
+`;

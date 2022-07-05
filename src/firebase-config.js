@@ -14,7 +14,9 @@ const firebaseConfig = {
   appId: "1:1058422111946:web:9f07d0004590de04ca3e33",
 };
 
-// Initialize Firebase
+// Inicializamos Firebase pasandole la configuración específica del proyecto
 const app = initializeApp(firebaseConfig);
+//linkeamos la bd firestore con la app
 const db = getFirestore(app);
+//exportamos db para popularla desde el componente <Contacto>
 export { db };
