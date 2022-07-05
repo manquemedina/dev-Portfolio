@@ -28,13 +28,12 @@ function App() {
     <ThemeProvider theme={themes[theme]}>
       {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
       <PageWrapper>
-        <Navbar
+{/*         <Navbar
           theme={theme}
           setTheme={setTheme}
           openModal={openModal}
           setOpenModal={setOpenModal}
-        />
-        {/* HAY UN HACK INTERESANTE SI SACAMOS LA IMAGEN DE FONDO DE <SectionWrapper> y lo ponemos en el contenedor específico de cada sección, porque scrollea y se superpone con el background del body, se podría experimentar */}
+        /> */}
         <RoutesWrapper>
           <Routes>
             <Route
