@@ -176,7 +176,16 @@ export const AboutText = styled.div`
   font-weight: bolder;
   margin: 4em;
 `;
-
+export const AboutLink = styled.h4`
+  display: inline-flex;
+  border-radius: 10px;
+  padding: 0 0.5rem;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorHover};
+  :hover {
+    animation: ${shake} 0.5s 1 forwards ease-in-out;
+  }
+`;
 //ICONOS TECNOLOGIAS
 
 export const LogoImg = styled.img`

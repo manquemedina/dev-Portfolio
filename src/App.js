@@ -28,12 +28,14 @@ function App() {
     <ThemeProvider theme={themes[theme]}>
       {openModal && <Modal openModal={openModal} setOpenModal={setOpenModal} />}
       <PageWrapper>
-{        <Navbar
-          theme={theme}
-          setTheme={setTheme}
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-        />}
+        {
+          <Navbar
+            theme={theme}
+            setTheme={setTheme}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+          />
+        }
         <RoutesWrapper>
           <Routes>
             <Route
@@ -48,7 +50,7 @@ function App() {
               path="/about"
               element={
                 <SectionWrapper>
-                  <About />
+                  <About setOpenModal={setOpenModal} />
                 </SectionWrapper>
               }
             />

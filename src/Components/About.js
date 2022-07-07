@@ -1,7 +1,8 @@
 import React from "react";
-import { SectionTitle, AboutImg, AboutText } from "../styles";
+import { Link } from "react-router-dom";
+import { SectionTitle, AboutImg, AboutText, AboutLink } from "../styles";
 
-const About = () => {
+const About = (props) => {
   return (
     <>
       <SectionTitle>Acerca de: </SectionTitle>
@@ -10,9 +11,15 @@ const About = () => {
         Hola! Soy Manque, desarrollador web front-end, músico y artista
         plástico. Vivo en Córdoba, Argentina. Me encuentro en costante
         formación, asimilando nuevas tecnologías, conocimientos y desafíos, y me
-        gustaría que mis habilidades sean de utilidad en otros proyectos. Si
-        creés que el tuyo puede ser uno de ésos pongámonos en
-        {/* <a href="#"> */} contacto!{/* </a> */}
+        gustaría aportar mis habilidades a otros proyectos. Si creés que el tuyo
+        puede ser uno de ésos, pongámonos en
+        <Link
+          to={"/contacto"}
+          style={{ margin: "0 0.75rem", textDecoration: "none" }}
+          onClick={props.setOpenModal(false)}
+        >
+          <AboutLink>contacto!</AboutLink>
+        </Link>
       </AboutText>
     </>
   );
