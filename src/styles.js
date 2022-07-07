@@ -230,7 +230,7 @@ export const ModalWindowBtn = styled.div`
     background-color: ${(props) => props.theme.colorHover};
   }
 `;
-export const MLink = styled.a`
+export const MLink = styled.div`
   margin: 0.5rem;
   padding: 0.5 1rem;
   width: 100%;
@@ -241,7 +241,7 @@ export const MLink = styled.a`
   :hover {
     color: ${(props) => props.theme.colorPrimario};
     background-color: ${(props) => props.theme.colorHover};
-    animation: ${bounce} 0.7s ease forwards;
+    animation: ${shakeAlt} 0.7s ease forwards;
     animation-iteration-count: 1;
   }
 `;
@@ -326,10 +326,18 @@ export const CardTitle = styled.h3`
   box-shadow: ${(props) => props.theme.BoxShadow};
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};
+  transition: all 0.5s ease-in-out;
 `;
 export const ProjectImg = styled.img`
+  object-fit: contain;
   height: 30rem;
   border-radius: 10px;
+  @media (max-width: 500px) {
+    width: 27rem;
+  }
+  @media (max-width: 415px) {
+    width: 21.2rem;
+  }
 `;
 export const IconDiv = styled.div`
   display: flex;
@@ -557,7 +565,7 @@ export const ContactButton = styled.button`
   font-family: "Bungee", cursive;
   margin: 1rem;
   padding: 1rem;
-  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   background-attachment: fixed;
   background-color: ${(props) => props.theme.colorPrimario};
   color: ${(props) => props.theme.colorFuente};

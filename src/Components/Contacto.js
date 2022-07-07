@@ -29,6 +29,8 @@ const Contacto = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     createContact();
+    //esta linea borra los inputs después de enviado el form, tuki
+    event.target.reset();
   };
 
   return (
