@@ -175,6 +175,13 @@ export const AboutText = styled.div`
   font-size: 2em;
   font-weight: bolder;
   margin: 4em;
+  padding: 1rem;
+  border-radius: 10px;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorPrimario};
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 `;
 export const AboutLink = styled.h4`
   display: inline-flex;
