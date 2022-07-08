@@ -2,7 +2,7 @@ import React from "react";
 import { SectionWrapper, HomeTitle } from "../styles";
 
 const Home = (props) => {
-  const homeImg =
+  /* const homeImg =
     props.theme === "light" ? (
       <img
         style={{ width: "40rem", paddingBottom: "12rem"}}
@@ -15,14 +15,14 @@ const Home = (props) => {
         src="https://github.com/manquemedina/img/blob/master/manosDark.png?raw=true"
         alt=""
       />
-    );
+    ); */
   return (
     <SectionWrapper>
       <HomeTitle>MANQUE MEDINA</HomeTitle>
       <HomeTitle style={{ fontSize: "1.72rem" }}>
         WEB DEVELOPER Front-End
       </HomeTitle>
-      {homeImg}
+    {/*   {homeImg} */}
     </SectionWrapper>
   );
 };

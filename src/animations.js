@@ -82,5 +82,50 @@ const slideIn = keyframes`
     opacity:1;
   }
 `;
+const slideInLeft = keyframes`
+0% {
+    position: relative;
+    left: -800px;
+    /* opacity: 0; */
+  }
+100% {
+    position: relative;
+    left: 0px;
+    opacity:1;
+  }
+`;
+const slideInBottom = keyframes`
+0% {
+    position: relative;
+    bottom: -800px;
+    /* opacity: 0; */
+  }
+100% {
+    position: relative;
+    bottom: 0px;
+    opacity:1;
+  }
+`;
+const slideInTop = keyframes`
+0% {
+    position: relative;
+    top: -300px;
+    /* opacity: 0; */
+  }
+100% {
+    position: relative;
+    top: 0px;
+    opacity:1;
+  }
+`;
 
-export { textBlur, shake, shakeAlt, slideIn, bounce };
+export {
+  textBlur,
+  shake,
+  shakeAlt,
+  slideIn,
+  slideInLeft,
+  slideInBottom,
+  slideInTop,
+  bounce,
+};

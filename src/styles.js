@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import { slideIn, shakeAlt, bounce, shake } from "./animations";
+import {
+  slideIn,
+  slideInLeft,
+  slideInBottom,
+  slideInTop,
+  shakeAlt,
+  bounce,
+  shake,
+} from "./animations";
 
 //WRAPPERS
 
@@ -160,9 +168,19 @@ export const Title = styled.div`
   font-size: 1.5em;
   margin: 1em;
 `;
+export const AboutTitle = styled.div`
+  font-family: "Bungee Shade", cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 3rem;
+  animation: ${slideInTop} 1s forwards ease-out;
+  @media (max-width: 420px) {
+    font-size: 3rem;
+  }
+`;
 export const AboutImg = styled.img`
   object-fit: contain;
-  max-height: 40rem;
+  max-height: 10rem;
   margin: 1em;
   border-radius: 30px;
   transition: all 0.5s ease;
@@ -172,27 +190,115 @@ export const AboutImg = styled.img`
 `;
 export const AboutText = styled.div`
   font-family: "Bungee Hairline";
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bolder;
-  margin: 4em;
-  padding: 1rem;
+  width: 66%;
+  padding: 4rem;
   border-radius: 10px;
   color: ${(props) => props.theme.colorFuente};
-  background-color: ${(props) => props.theme.colorPrimario};
+  background-color: ${(props) => props.theme.colorSecundario};
   background-attachment: fixed;
   box-shadow: ${(props) => props.theme.BoxShadow};
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  animation: ${slideInLeft} 1s forwards ease-out;
+  transition: all ease-in-out;
+  @media (max-width: 470px) {
+    word-break: break-all;
+    font-size: 2em;
+  }
+`;
+export const AboutTextAlt = styled.div`
+  font-family: "Bungee Hairline";
+  font-size: 3em;
+  font-weight: bolder;
+  width: 66%;
+  margin: 1em;
+  padding: 4rem;
+  border-radius: 10px;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorSecundario};
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  animation: ${slideIn} 1s forwards ease-out;
+  transition: all ease-in-out;
+  @media (max-width: 470px) {
+    word-break: break-all;
+    font-size: 2em;
+  }
+`;
+export const AboutContactBox = styled.div`
+  font-family: "Bungee Hairline";
+  font-size: 3em;
+  font-weight: bolder;
+  width: 66%;
+  height: min-content;
+  margin: 1em;
+  padding: 4rem;
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorSecundario};
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  animation: ${slideIn} 1s forwards ease-out;
+  transition: all ease-in-out;
+  @media (max-width: 470px) {
+    /* word-break: break-all; */
+    font-size: 2em;
+  }
 `;
 export const AboutLink = styled.h4`
   display: inline-flex;
   border-radius: 10px;
   padding: 0 0.5rem;
-  color: ${(props) => props.theme.colorFuente};
+  /*   color: ${(props) => props.theme.colorFuente};
   background-color: ${(props) => props.theme.colorHover};
+  box-shadow: ${(props) => props.theme.BoxShadow}; */
+  color: ${(props) => props.theme.colorHover};
+  background-color: ${(props) => props.theme.colorFuente};
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
   :hover {
     animation: ${shake} 0.5s 1 forwards ease-in-out;
+    color: ${(props) => props.theme.colorPrimario};
+    background-color: ${(props) => props.theme.colorTerciario};
   }
 `;
+
+//ABOUT BLOBS
+export const Blob1 = styled.div`
+  display: flex;
+  padding: 2rem;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorHover};
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+`;
+export const Blob2 = styled.div`
+  display: flex;
+  padding: 2rem;
+  color: ${(props) => props.theme.colorHover};
+  background-color: ${(props) => props.theme.colorFuente};
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+`;
+export const Blob3 = styled.div`
+  /* display: flex; */
+  padding: 2rem;
+  color: ${(props) => props.theme.colorFuente};
+  background-color: ${(props) => props.theme.colorHover};
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-attachment: fixed;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  animation: ${slideInBottom} 1s forwards ease-out;
+`;
+
 //ICONOS TECNOLOGIAS
 
 export const LogoImg = styled.img`
