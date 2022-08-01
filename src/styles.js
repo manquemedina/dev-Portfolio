@@ -160,6 +160,22 @@ export const HomeTitle = styled.div`
   color: ${(props) => props.theme.colorHover};
   animation: ${slideIn} 1s 1 ease-in-out;
 `;
+export const HomeWindow = styled.div`
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: ${(props) => props.theme.BoxShadow};
+  background-color: /* ${(props) => props.theme.colorPrimario} */transparent;
+  background-attachment: fixed;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  animation: ${slideInBottom} 1s 1 ease-in-out;
+`;
 
 //ABOUT
 
@@ -203,7 +219,7 @@ export const AboutText = styled.div`
   animation: ${slideInLeft} 1s forwards ease-out;
   transition: all ease-in-out;
   @media (max-width: 470px) {
-    word-break: break-all;
+    /* word-break: break-all; */
     font-size: 2em;
   }
 `;
@@ -223,7 +239,7 @@ export const AboutTextAlt = styled.div`
   animation: ${slideIn} 1s forwards ease-out;
   transition: all ease-in-out;
   @media (max-width: 470px) {
-    word-break: break-all;
+   /*  word-break: break-all; */
     font-size: 2em;
   }
 `;

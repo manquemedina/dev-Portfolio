@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionWrapper, HomeTitle } from "../styles";
+import { SectionWrapper, HomeTitle, HomeWindow } from "../styles";
 
 const Home = (props) => {
   /* const homeImg =
@@ -18,11 +18,13 @@ const Home = (props) => {
     ); */
   return (
     <SectionWrapper>
-      <HomeTitle>MANQUE MEDINA</HomeTitle>
-      <HomeTitle style={{ fontSize: "1.72rem" }}>
-        WEB DEVELOPER Front-End
-      </HomeTitle>
-    {/*   {homeImg} */}
+      <HomeWindow>
+        <HomeTitle>MANQUE MEDINA</HomeTitle>
+        <HomeTitle style={{ fontSize: "1.72rem" }}>
+          WEB DEVELOPER Front-End
+        </HomeTitle>
+        {/*   {homeImg} */}
+      </HomeWindow>
     </SectionWrapper>
   );
 };

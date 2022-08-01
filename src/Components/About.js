@@ -37,7 +37,6 @@ const About = (props) => {
           <Link
             to={"/contacto"}
             style={{ margin: "0 0.75rem", textDecoration: "none" }}
-            onClick={props.setOpenModal(false)}
           >
             <AboutLink>contacto!</AboutLink>
           </Link>
