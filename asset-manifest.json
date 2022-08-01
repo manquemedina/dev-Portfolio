@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/manquemedina/dev-Portfolio/static/js/main.69efb8a6.js",
-    "index.html": "/manquemedina/dev-Portfolio/index.html",
-    "main.69efb8a6.js.map": "/manquemedina/dev-Portfolio/static/js/main.69efb8a6.js.map"
+    "main.js": "/dev-Portfolio/static/js/main.b0f8492d.js",
+    "index.html": "/dev-Portfolio/index.html",
+    "main.b0f8492d.js.map": "/dev-Portfolio/static/js/main.b0f8492d.js.map"
   },
   "entrypoints": [
-    "static/js/main.69efb8a6.js"
+    "static/js/main.b0f8492d.js"
   ]
 }
