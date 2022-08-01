@@ -11,7 +11,7 @@ import {
   logoGitHub,
   logoFigma,
 } from "./logos";
-//COMPONENTEe
+//COMPONENTE
 const Tecnologias = () => {
   return (
     <TecnologiasWrapper>
