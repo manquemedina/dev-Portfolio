@@ -157,7 +157,7 @@ export const ModalBtn = styled.div`
 export const HomeTitle = styled.div`
   margin: 1rem;
   font-size: 5.2rem;
-  color: ${(props) => props.theme.colorHover};
+  color: ${(props) => props.theme.colorPrimario};
   animation: ${slideIn} 1s 1 ease-in-out;
 `;
 export const HomeWindow = styled.div`
@@ -171,7 +171,7 @@ export const HomeWindow = styled.div`
   justify-content: center;
   border-radius: 10px;
   box-shadow: ${(props) => props.theme.BoxShadow};
-  background-color: /* ${(props) => props.theme.colorPrimario} */transparent;
+  background-color: ${(props) => props.theme.colorHover};
   background-attachment: fixed;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
   animation: ${slideInBottom} 1s 1 ease-in-out;
@@ -239,7 +239,7 @@ export const AboutTextAlt = styled.div`
   animation: ${slideIn} 1s forwards ease-out;
   transition: all ease-in-out;
   @media (max-width: 470px) {
-   /*  word-break: break-all; */
+    /*  word-break: break-all; */
     font-size: 2em;
   }
 `;
@@ -326,6 +326,7 @@ export const LogoImg = styled.img`
   }
   @media (max-width: 470px) {
     width: 5em;
+    margin: 1rem;
   }
 `;
 
@@ -564,8 +565,8 @@ export const GridTecnologías = styled.div`
   grid-auto-rows: auto;
   align-items: center;
   justify-content: space-around;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
-  grid-auto-rows: minmax(50px, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(70px, 100px));
+  grid-auto-rows: minmax(70px, 100px);
   grid-gap: 1rem;
   margin: 6em 0;
   @media (max-width: 470px) {
