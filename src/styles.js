@@ -9,7 +9,7 @@ import {
   shake,
 } from "./animations";
 
-//WRAPPERS
+//WRAPPERSs
 
 export const PageWrapper = styled.div`
   display: flex;
